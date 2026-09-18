@@ -138,7 +138,7 @@ function Hero() {
       <div className="mx-auto flex min-h-[calc(100svh-9rem)] w-full max-w-370 flex-col items-center justify-center">
         <div className="relative flex w-full -translate-y-2 justify-center sm:-translate-y-8 lg:-translate-y-10">
           <motion.div
-            className="pointer-events-none absolute left-1/2 top-1/2 z-0 w-[clamp(640px,120vw,1940px)] -translate-x-1/2 -translate-y-[64%] select-none mix-blend-multiply"
+            className="pointer-events-none absolute left-1/2 top-1/2 z-0 w-[clamp(520px,90vw,1460px)] -translate-x-1/2 -translate-y-[64%] select-none mix-blend-multiply"
             style={{ y: signatureSpringY, opacity: signatureOpacity, filter: signatureBlur }}
           >
             <motion.div
@@ -147,7 +147,7 @@ function Hero() {
               transition={{ duration: 1.15, delay: 0.74, ease: [0.16, 1, 0.3, 1] }}
             >
               <Image
-                src="/images/profile/signature-sarah-aliriel.png"
+                src="/images/profile/sarah-aliriel.png"
                 alt="Assinatura Sarah Aliriel"
                 width={1920}
                 height={1080}
@@ -228,7 +228,7 @@ function Story({ timeline }: { timeline: TimelineItem[] }) {
               whileInView="show"
               viewport={{ once: true, amount: 0.35 }}
             >
-              <div className="font-display text-[clamp(2rem,4vw,4.5rem)] font-black leading-none text-[#1800ad]">{item.year}</div>
+              <div className="font-display text-[clamp(2rem,4vw,4.5rem)] font-black leading-none text-[#552f22]">{item.year}</div>
               <h3 className="max-w-75 font-display text-[clamp(1.45rem,2.4vw,2.65rem)] font-semibold leading-[1.02] tracking-[0]">{item.title}</h3>
               <p className="max-w-2xl text-base leading-relaxed text-[#1e1e1e]/68 sm:text-lg">{item.body}</p>
             </motion.article>
@@ -281,13 +281,13 @@ function Help({ title, columns }: { title: string; columns: HelpColumn[] }) {
                 transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
               >
                 <motion.div
-                  className="absolute -inset-x-px top-0 h-1 origin-left bg-[#1800ad]"
+                  className="absolute -inset-x-px top-0 h-1 origin-left bg-[#552f22]"
                   animate={{ scaleX: activeColumn === column.number || (!activeColumn && column.featured) ? 1 : 0 }}
                   transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
                 />
                 <div className="flex items-start justify-between gap-6">
-                  <span className="font-display text-[13px] font-semibold text-[#1800ad]">{column.number}</span>
-                  {column.featured ? <span className="h-2.5 w-2.5 rounded-full bg-[#1800ad]" aria-hidden="true" /> : null}
+                  <span className="font-display text-[13px] font-semibold text-[#552f22]">{column.number}</span>
+                  {column.featured ? <span className="h-2.5 w-2.5 rounded-full bg-[#552f22]" aria-hidden="true" /> : null}
                 </div>
                 <h3 className="mt-10 font-display text-[clamp(1.55rem,2vw,2.4rem)] font-semibold leading-tight tracking-[0]">{column.title}</h3>
                 <ul className="mt-8 space-y-3 text-[15px] leading-snug text-[#1e1e1e]/72 sm:text-base">
@@ -319,7 +319,7 @@ function SocialProof({ kicker, title, intro, stats }: { kicker: string; title: s
           viewport={{ once: true, amount: 0.35 }}
         >
           <div>
-            <span className="kicker text-[#1800ad]">{kicker}</span>
+            <span className="kicker text-[#552f22]">{kicker}</span>
             <h2 className="mt-6 max-w-[11ch] font-display text-[clamp(3.2rem,7.5vw,8.4rem)] font-black leading-[0.88] tracking-[-0.045em]">
               {title}
             </h2>
@@ -339,7 +339,7 @@ function SocialProof({ kicker, title, intro, stats }: { kicker: string; title: s
               transition={{ delay: index * 0.08 }}
             >
               <motion.span
-                className="absolute inset-x-0 top-0 h-0.75 origin-left bg-[#1800ad]"
+                className="absolute inset-x-0 top-0 h-0.75 origin-left bg-[#552f22]"
                 initial={{ scaleX: 0 }}
                 whileInView={{ scaleX: 1 }}
                 viewport={{ once: true, amount: 0.7 }}
@@ -347,10 +347,10 @@ function SocialProof({ kicker, title, intro, stats }: { kicker: string; title: s
                 aria-hidden="true"
               />
               <div className="flex items-center justify-between lg:block">
-                <span className="font-display text-xs font-semibold tracking-[0.12em] text-[#1800ad]">0{index + 1}</span>
+                <span className="font-display text-xs font-semibold tracking-[0.12em] text-[#552f22]">0{index + 1}</span>
                 <span className="text-[10px] uppercase tracking-[0.18em] text-[#1e1e1e]/35 lg:mt-4 lg:block">{stat.chapter}</span>
               </div>
-              <strong className="block font-display text-[clamp(5.6rem,14vw,13.5rem)] font-black leading-[0.72] tracking-[-0.075em] text-[#1800ad] transition-transform duration-700 ease-[cubic-bezier(.16,1,.3,1)] group-hover:translate-x-2 sm:leading-[0.74]">
+              <strong className="block font-display text-[clamp(5.6rem,14vw,13.5rem)] font-black leading-[0.72] tracking-[-0.075em] text-[#552f22] transition-transform duration-700 ease-[cubic-bezier(.16,1,.3,1)] group-hover:translate-x-2 sm:leading-[0.74]">
                 {stat.value}
               </strong>
               <p className="max-w-[12ch] font-display text-[clamp(1.65rem,3vw,3.25rem)] font-semibold leading-[0.98] tracking-[-0.025em]">

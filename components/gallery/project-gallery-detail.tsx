@@ -62,7 +62,6 @@ function HeroSection({ project, backLabel }: { project: GalleryProject; backLabe
         transition={{ duration: mockupReady ? 0.85 : 0, ease: EASE }}
         className="relative z-20 mt-6 h-[min(110vw,720px)] w-full lg:absolute lg:-bottom-[17vh] lg:right-[3vw] lg:mt-0 lg:h-[108%] lg:w-[53%]"
       >
-        <Image src="/images/gallery/blurr-hero.png" alt="" fill sizes="(max-width: 1023px) 100vw, 53vw" className="pointer-events-none translate-x-[14%] scale-[1.3] object-contain opacity-80 lg:translate-x-[22%]" />
         <Image src={project.heroMockup.src} alt={project.heroMockup.alt} fill sizes="(max-width: 1023px) 100vw, 53vw" className="relative z-10 object-contain object-center lg:object-right" preload onLoad={() => setMockupReady(true)} />
         <figcaption className="sr-only">{project.heroMockup.title}</figcaption>
       </motion.figure>
@@ -376,7 +375,7 @@ function FinalCta({ currentProject, nextProject, labels }: { currentProject: Gal
               const active = index === currentIndex
               return (
                 <li key={slug} aria-current={active ? "step" : undefined} className="grid justify-items-center gap-2 text-[9px] font-black tracking-[0.18em] text-[#e8e7e7]/32">
-                  <span aria-hidden="true" className={`size-1.5 rounded-full border ${active ? "border-(--accent) bg-(--accent) shadow-[0_0_14px_rgba(24,0,173,0.3)]" : "border-[#e8e7e7]/32"}`} />
+                  <span aria-hidden="true" className={`size-1.5 rounded-full border ${active ? "border-(--accent) bg-(--accent) shadow-[0_0_14px_rgba(85,47,34,0.3)]" : "border-[#e8e7e7]/32"}`} />
                   <span className={active ? "text-[#e8e7e7]/82" : undefined}>{String(index + 1).padStart(2, "0")}</span>
                 </li>
               )

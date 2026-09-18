@@ -97,8 +97,8 @@ function HeroScene({ introDone }: { introDone: boolean }) {
                 }}
               >
                 <Image
-                  src="/images/profile/signature-sarah-aliriel.png"
-                  alt="Assinatura Sarah Aliriel"
+                  src="/images/profile/sarah-aliriel.png"
+                  alt="Sarah Aliriel"
                   width={2600}
                   height={600}
                   preload
@@ -205,7 +205,7 @@ function InteractivePortfolio({ introDone }: { introDone: boolean }) {
             <motion.span
               key={`word-${activeIndex}`}
               className="block whitespace-nowrap font-display text-[clamp(16px,1.65vw,27px)] font-bold tracking-[-0.035em] text-detail"
-              style={{ color: "#1800ad" }}
+              style={{ color: "#552f22" }}
               initial={{ opacity: 0, y: prefersReducedMotion ? 0 : 10, filter: prefersReducedMotion ? "none" : "blur(8px)" }}
               animate={{ opacity: 0.88, y: 0, filter: "blur(0px)" }}
               exit={{ opacity: 0, y: prefersReducedMotion ? 0 : -4, filter: prefersReducedMotion ? "none" : "blur(6px)" }}
@@ -249,7 +249,7 @@ function InteractivePortfolio({ introDone }: { introDone: boolean }) {
           <button
             key={`${letter}-${index}`}
             type="button"
-            className="absolute z-30 appearance-none border-0 bg-transparent p-0 outline-none focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1800ad]"
+            className="absolute z-30 appearance-none border-0 bg-transparent p-0 outline-none focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#552f22]"
             style={{ left: bounds.left, top: bounds.top, width: bounds.width, height: bounds.height }}
             aria-label={`${t("heroLetterAria")} ${letter.toUpperCase()}: ${word}`}
             aria-pressed={isActive}
