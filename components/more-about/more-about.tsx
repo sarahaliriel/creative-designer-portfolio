@@ -170,7 +170,7 @@ function Hero() {
           >
             <div className="grid gap-3 text-left sm:grid-cols-2 lg:grid-cols-[1.5fr_1px_1fr] lg:gap-x-12 lg:gap-y-3 lg:items-start">
               <div className="mb-5 h-px w-36 bg-[#1e1e1e]/55 sm:hidden" />
-              <h1 className="profile-name whitespace-nowrap text-[clamp(2.6rem,6.2vw,4rem)] font-medium tracking-[-0.04em] sm:col-span-1 sm:text-[clamp(2.1rem,4.3vw,4rem)] sm:font-extrabold sm:tracking-normal lg:!text-[clamp(3.8rem,3.6vw,4.6rem)] lg:!font-extrabold lg:leading-[0.96] lg:tracking-[-0.045em]">
+              <h1 className="profile-name whitespace-nowrap text-[clamp(2.6rem,6.2vw,4rem)] font-medium tracking-[-0.04em] text-[#552f22] sm:col-span-1 sm:text-[clamp(2.1rem,4.3vw,4rem)] sm:font-extrabold sm:tracking-normal lg:row-span-2 lg:self-center lg:text-center lg:!text-[clamp(3.8rem,3.6vw,4.6rem)] lg:!font-extrabold lg:leading-[0.96] lg:tracking-[-0.045em]">
                 {t("moreAboutName")}
               </h1>
               <div className="hidden lg:col-start-2 lg:row-span-2 lg:block lg:self-stretch lg:bg-[#1e1e1e]/24" />
