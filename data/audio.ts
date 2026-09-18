@@ -1,5 +1,5 @@
 export const PORTFOLIO_TRACK = {
-  src: "/music/portfolio-soundtrack.mp3",
+  src: "/music/music-portfolio.MP3",
   title: "Portfolio soundtrack",
   artist: "Sarah Aliriel",
   volume: 0.22,
