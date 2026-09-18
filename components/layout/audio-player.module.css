@@ -11,18 +11,13 @@
   gap: 0.55rem;
   color: #1e1e1e;
   border: 0;
-  border-radius: 999px;
-  background: color-mix(in srgb, #e8e7e7 78%, transparent);
-  box-shadow: inset 0 0 0 1px rgba(30, 30, 30, 0.11);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: transparent;
   cursor: pointer;
-  transition: opacity 180ms ease, transform 160ms ease, box-shadow 220ms ease;
+  transition: opacity 180ms ease, transform 160ms ease;
 }
 
 .player:hover {
   opacity: 0.78;
-  box-shadow: inset 0 0 0 1px rgba(24, 0, 173, 0.22);
 }
 
 .player:active {
