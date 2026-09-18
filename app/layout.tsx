@@ -5,6 +5,8 @@ import { LanguageProvider } from "@/components/providers/i18n"
 import CustomCursor from "@/components/effects/cursor-custom"
 import IntroOverlay from "@/components/effects/intro-overlay"
 import LanguageToggle from "@/components/layout/language-toggle"
+import AudioPlayer from "@/components/layout/audio-player"
+import { AudioProvider } from "@/components/providers/audio"
 import JsonLd from "@/components/seo/json-ld"
 import Analytics from "@/components/analytics/analytics"
 import { Analytics as VercelAnalytics } from "@vercel/analytics/next"
@@ -116,10 +118,13 @@ export default function RootLayout({
         <Analytics />
         <VercelAnalytics />
         <LanguageProvider>
-          <CustomCursor />
-          <IntroOverlay />
-          {children}
-          <LanguageToggle />
+          <AudioProvider>
+            <CustomCursor />
+            <IntroOverlay />
+            {children}
+            <AudioPlayer />
+            <LanguageToggle />
+          </AudioProvider>
         </LanguageProvider>
       </body>
     </html>
