@@ -111,19 +111,15 @@ function Hero() {
   const sectionRef = useRef<HTMLElement | null>(null)
   const { scrollYProgress } = useScroll({ target: sectionRef, offset: ["start start", "end start"] })
   const y = useTransform(scrollYProgress, [0, 1], prefersReducedMotion ? [0, 0] : [0, 86])
-  const signatureY = useTransform(scrollYProgress, [0, 1], prefersReducedMotion ? [0, 0] : [0, 34])
   const imageScale = useTransform(scrollYProgress, [0, 1], prefersReducedMotion ? [1, 1] : [1, 1.08])
-  const signatureOpacity = useTransform(scrollYProgress, [0, 0.72], prefersReducedMotion ? [1, 1] : [1, 0])
-  const signatureBlur = useTransform(scrollYProgress, [0, 0.72], prefersReducedMotion ? ["blur(0px)", "blur(0px)"] : ["blur(0px)", "blur(8px)"])
   const imageY = useSpring(y, { stiffness: 80, damping: 26, mass: 0.35 })
-  const signatureSpringY = useSpring(signatureY, { stiffness: 70, damping: 30, mass: 0.5 })
   const cursorX = useSpring(0, { stiffness: 80, damping: 28, mass: 0.5 })
   const cursorY = useSpring(0, { stiffness: 80, damping: 28, mass: 0.5 })
 
   return (
     <section
       ref={sectionRef}
-      className="relative min-h-svh overflow-hidden px-4 pb-16 pt-20 sm:px-8 sm:pb-16 sm:pt-28 lg:px-12 lg:pt-30"
+      className="relative min-h-svh overflow-hidden px-4 pb-16 pt-18 sm:px-8 sm:pb-16 sm:pt-28 lg:px-12 lg:pt-30"
       onMouseMove={(event) => {
         if (prefersReducedMotion) return
         const rect = event.currentTarget.getBoundingClientRect()
@@ -135,68 +131,54 @@ function Hero() {
         cursorY.set(0)
       }}
     >
-      <div className="mx-auto flex min-h-[calc(100svh-9rem)] w-full max-w-370 flex-col items-center justify-center">
-        <div className="relative flex w-full -translate-y-2 justify-center sm:-translate-y-8 lg:-translate-y-10">
+      <div className="mx-auto flex min-h-[calc(100svh-9rem)] w-full max-w-370 flex-col items-start justify-start pt-7 sm:items-center sm:justify-center sm:pt-0">
+        <div className="relative flex w-full translate-y-0 justify-center sm:-translate-y-10 lg:-translate-y-14">
           <motion.div
-            className="pointer-events-none absolute left-1/2 top-1/2 z-0 w-[clamp(520px,90vw,1460px)] -translate-x-1/2 -translate-y-[64%] select-none mix-blend-multiply"
-            style={{ y: signatureSpringY, opacity: signatureOpacity, filter: signatureBlur }}
-          >
-            <motion.div
-              initial={{ opacity: 0, y: prefersReducedMotion ? 0 : 18, filter: "blur(10px)" }}
-              animate={{ opacity: 0.065, y: 0, filter: "blur(0px)" }}
-              transition={{ duration: 1.15, delay: 0.74, ease: [0.16, 1, 0.3, 1] }}
-            >
-              <Image
-                src="/images/profile/sarah-aliriel.png"
-                alt="Assinatura Sarah Aliriel"
-                width={1920}
-                height={1080}
-                className="h-auto w-full"
-              />
-            </motion.div>
-          </motion.div>
-
-          <motion.div
-            className="relative z-10 h-[62svh] min-h-96 w-[min(84vw,calc(62svh*0.61))] max-w-155 overflow-hidden sm:h-[74svh] sm:min-h-120 sm:w-[min(68vw,calc(74svh*0.61))] lg:h-[78svh] lg:min-h-155 lg:w-[min(46vw,calc(78svh*0.61))]"
+            className="relative z-10 aspect-[5/6] w-full overflow-hidden sm:aspect-[5/3] sm:w-[min(66vw,calc(50svh*1.667))] lg:w-[min(76vw,calc(66svh*1.667))]"
             initial={{ opacity: 0, y: 34, filter: "blur(12px)", clipPath: "inset(18% 0 18% 0)" }}
             animate={{ opacity: 1, y: 0, filter: "blur(0px)", clipPath: "inset(0% 0 0% 0)" }}
             transition={{ duration: 1.18, delay: 0.18, ease: [0.16, 1, 0.3, 1] }}
           >
-            <motion.div className="absolute inset-[-6%_0]" style={{ y: imageY }}>
+            <motion.div className="absolute inset-0 sm:inset-[-6%_0]" style={{ y: imageY }}>
               <motion.div
                 className="absolute inset-0"
                 style={{ scale: imageScale, x: cursorX, y: cursorY }}
               >
-                <Image
-                  src="/images/moreabout/aboutme-photo.png"
-                  alt="Sarah Aliriel Dumitrache"
-                  fill
-                  preload
-                  sizes="(min-width: 1024px) 46vw, (min-width: 640px) 68vw, 82vw"
-                  className="scale-[1.03] object-cover object-center"
-                />
+                <picture>
+                  <source media="(max-width: 639px)" srcSet="/images/moreabout/sarah-aliriel-photo.jpeg" />
+                  <Image
+                    src="/images/moreabout/sarah-aliriel-photo.jpeg"
+                    alt="Sarah Aliriel Dumitrache"
+                    fill
+                    fetchPriority="high"
+                    sizes="(min-width: 1024px) 76vw, (min-width: 640px) 66vw, 82vw"
+                    className="scale-[1.03] object-cover object-center"
+                  />
+                </picture>
                 <div className="absolute inset-0 border border-[#1e1e1e]/10 mix-blend-multiply" />
               </motion.div>
             </motion.div>
           </motion.div>
         </div>
 
-        <div className="relative z-20 mt-0 w-full max-w-305 sm:mt-1">
+        <div className="relative z-20 mt-8 w-full max-w-305 sm:mt-1 lg:-mt-5 lg:w-[min(76vw,calc(66svh*1.667))] lg:max-w-none">
           <motion.div
-            className="border-t border-[#1e1e1e]/24 pt-5 text-[14px] leading-snug text-[#1e1e1e]/74 sm:pt-6 sm:text-[15px] lg:text-base"
+            className="pt-0 text-[14px] leading-snug text-[#1e1e1e]/74 sm:border-t sm:border-[#1e1e1e]/24 sm:pt-6 sm:text-[15px] lg:pt-8 lg:text-base"
             initial={{ opacity: 0, y: 18, filter: "blur(8px)" }}
             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             transition={{ duration: 0.82, delay: 0.98, ease: [0.16, 1, 0.3, 1] }}
           >
-            <div className="grid gap-3 text-center sm:grid-cols-2 sm:text-left lg:grid-cols-[1fr_1.4fr_1fr] lg:items-start">
-              <h1 className="profile-name whitespace-nowrap sm:col-span-1">
+            <div className="grid gap-3 text-left sm:grid-cols-2 lg:grid-cols-[1.5fr_1px_1fr] lg:gap-x-12 lg:gap-y-3 lg:items-start">
+              <div className="mb-5 h-px w-36 bg-[#1e1e1e]/55 sm:hidden" />
+              <h1 className="profile-name whitespace-nowrap text-[clamp(2.6rem,6.2vw,4rem)] font-medium tracking-[-0.04em] sm:col-span-1 sm:text-[clamp(2.1rem,4.3vw,4rem)] sm:font-extrabold sm:tracking-normal lg:!text-[clamp(3.8rem,3.6vw,4.6rem)] lg:!font-extrabold lg:leading-[0.96] lg:tracking-[-0.045em]">
                 {t("moreAboutName")}
               </h1>
-              <p className="sm:text-right lg:text-center">
+              <div className="hidden lg:col-start-2 lg:row-span-2 lg:block lg:self-stretch lg:bg-[#1e1e1e]/24" />
+              <p className="text-[1.25rem] leading-[1.3] sm:text-right sm:text-[15px] lg:col-start-3 lg:text-left lg:text-base">
                 {t("moreAboutRole1")} <span className="text-[#1e1e1e]/34">/</span> {t("moreAboutRole2")}{" "}
-                <span className="text-[#1e1e1e]/34">/</span> {t("moreAboutRole3")}
+                <span className="hidden text-[#1e1e1e]/34 sm:inline">/</span> <span className="block sm:inline lg:inline">{t("moreAboutRole3")}</span>
               </p>
-              <p className="sm:col-span-2 sm:text-center lg:col-span-1 lg:text-right">{t("moreAboutLocation")}</p>
+              <p className="text-[0.9rem] text-[#1e1e1e]/52 sm:col-span-2 sm:text-center sm:text-[15px] sm:text-[#1e1e1e]/74 lg:col-start-3 lg:text-left lg:text-base">{t("moreAboutLocation")}</p>
             </div>
           </motion.div>
         </div>
