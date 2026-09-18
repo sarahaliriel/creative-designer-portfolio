@@ -13,7 +13,7 @@
   border: 0;
   background: transparent;
   cursor: pointer;
-  transition: opacity 180ms ease, transform 160ms ease;
+  transition: color 220ms ease, opacity 180ms ease, transform 160ms ease;
 }
 
 .player:hover {
@@ -27,6 +27,14 @@
 .player:focus-visible {
   outline: 2px solid #552f22;
   outline-offset: 3px;
+}
+
+.darkTheme {
+  color: #e8e7e7;
+}
+
+.darkTheme:focus-visible {
+  outline-color: #e8e7e7;
 }
 
 .icon {
@@ -96,8 +104,12 @@
   box-shadow: 0 0 6px rgba(85, 47, 34, 0.24);
 }
 
-.initialLabel,
-.tooltip {
+.darkTheme.playing .bar:nth-child(3) {
+  background: #e8e7e7;
+  box-shadow: 0 0 6px rgba(232, 231, 231, 0.2);
+}
+
+.initialLabel {
   position: absolute;
   right: calc(100% + 0.65rem);
   white-space: nowrap;
@@ -112,22 +124,6 @@
 .initialLabel {
   opacity: 0.52;
   transition: opacity 180ms ease, transform 180ms ease;
-}
-
-.tooltip {
-  padding: 0.42rem 0.5rem 0.38rem;
-  color: #e8e7e7;
-  border-radius: 2px;
-  background: #1e1e1e;
-  opacity: 0;
-  transform: translateX(3px);
-  transition: opacity 160ms ease, transform 180ms ease;
-}
-
-.player:hover .tooltip,
-.player:focus-visible .tooltip {
-  opacity: 1;
-  transform: translateX(0);
 }
 
 .player:hover .initialLabel,
@@ -154,15 +150,14 @@
   }
   .bar:nth-child(n + 4) { display: none; }
   .visualizer { gap: 2.5px; }
-  .initialLabel, .tooltip { display: none; }
+  .initialLabel { display: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .player,
   .playIcon,
   .pauseIcon,
-  .initialLabel,
-  .tooltip {
+  .initialLabel {
     transition-duration: 80ms;
   }
 

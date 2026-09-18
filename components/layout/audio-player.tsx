@@ -1,7 +1,6 @@
 "use client"
 
-import { useEffect, useRef } from "react"
-import { PORTFOLIO_TRACK } from "@/data/audio"
+import { useEffect, useRef, useState } from "react"
 import { usePortfolioAudio } from "@/components/providers/audio"
 import styles from "./audio-player.module.css"
 
@@ -20,6 +19,41 @@ export default function AudioPlayer() {
   const levelsRef = useRef(FREQUENCY_BANDS.map(() => NEUTRAL_LEVEL))
   const animationFrameRef = useRef<number | null>(null)
   const playingRef = useRef(isPlaying)
+  const playerRef = useRef<HTMLButtonElement | null>(null)
+  const [isOnDarkTheme, setIsOnDarkTheme] = useState(false)
+
+  useEffect(() => {
+    let frame: number | null = null
+
+    const updateTheme = () => {
+      frame = null
+      const rect = playerRef.current?.getBoundingClientRect()
+      if (!rect) return
+
+      const themeElement = document
+        .elementsFromPoint(rect.left + rect.width / 2, rect.top + rect.height / 2)
+        .filter((element): element is HTMLElement => element instanceof HTMLElement && !playerRef.current?.contains(element))
+        .map((element) => element.closest<HTMLElement>("[data-scroll-theme]"))
+        .find((element): element is HTMLElement => element !== null)
+
+      const nextThemeIsDark = themeElement?.dataset.scrollTheme === "dark"
+      setIsOnDarkTheme((current) => current === nextThemeIsDark ? current : nextThemeIsDark)
+    }
+
+    const scheduleThemeUpdate = () => {
+      if (frame === null) frame = requestAnimationFrame(updateTheme)
+    }
+
+    updateTheme()
+    window.addEventListener("scroll", scheduleThemeUpdate, { passive: true })
+    window.addEventListener("resize", scheduleThemeUpdate)
+
+    return () => {
+      window.removeEventListener("scroll", scheduleThemeUpdate)
+      window.removeEventListener("resize", scheduleThemeUpdate)
+      if (frame !== null) cancelAnimationFrame(frame)
+    }
+  }, [])
 
   useEffect(() => {
     playingRef.current = isPlaying
@@ -79,15 +113,14 @@ export default function AudioPlayer() {
 
   return (
     <button
+      ref={playerRef}
       type="button"
       aria-label={actionLabel}
       aria-pressed={isPlaying}
-      title={`${actionLabel} — ${PORTFOLIO_TRACK.title}`}
       onClick={() => void togglePlayback()}
-      className={`${styles.player} ${isPlaying ? styles.playing : ""}`}
+      className={`${styles.player} ${isPlaying ? styles.playing : ""} ${isOnDarkTheme ? styles.darkTheme : ""}`}
     >
       {!hasInteracted ? <span aria-hidden="true" className={styles.initialLabel}>play sound</span> : null}
-      {hasInteracted ? <span aria-hidden="true" className={styles.tooltip}>{isPlaying ? "pause sound" : "play sound"}</span> : null}
       <span aria-hidden="true" className={styles.icon}>
         <span className={`${styles.playIcon} ${isPlaying ? styles.hiddenIcon : ""}`} />
         <span className={`${styles.pauseIcon} ${isPlaying ? "" : styles.hiddenIcon}`} />
