@@ -16,6 +16,8 @@ import {
   SITE_DESCRIPTION,
   SITE_NAME,
   SITE_TITLE,
+  SOCIAL_IMAGE,
+  absoluteUrl,
   siteUrl,
   websiteSchema,
 } from "@/lib/seo"
@@ -39,20 +41,20 @@ export const metadata: Metadata = {
     "social media design",
     "portfólio criativo",
   ],
-  alternates: { canonical: "/" },
+  alternates: { canonical: absoluteUrl("/") },
   openGraph: {
     type: "website",
     locale: "pt_PT",
-    url: "/",
+    url: absoluteUrl("/"),
     siteName: SITE_NAME,
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
     images: [
       {
-        url: "/images/profile/signature-sarah-aliriel.png",
-        width: 1080,
-        height: 1350,
-        alt: `Portfólio de ${SITE_NAME}`,
+        url: absoluteUrl(SOCIAL_IMAGE),
+        width: 3484,
+        height: 1982,
+        alt: `Hero do portfólio de ${SITE_NAME}`,
       },
     ],
   },
@@ -60,6 +62,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
+    images: [absoluteUrl(SOCIAL_IMAGE)],
   },
   icons: {
     icon: [

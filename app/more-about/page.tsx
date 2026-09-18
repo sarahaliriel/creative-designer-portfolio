@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import MoreAboutPage from "@/components/more-about/more-about"
 import JsonLd from "@/components/seo/json-ld"
-import { absoluteUrl, createPageMetadata, siteUrl } from "@/lib/seo"
+import { absoluteUrl, createPageMetadata, siteUrl, SOCIAL_IMAGE } from "@/lib/seo"
 
 const title = "Sobre Sarah Aliriel | Designer, Vídeo & Frontend"
 const description =
@@ -11,7 +11,7 @@ export const metadata: Metadata = createPageMetadata({
   title,
   description,
   path: "/more-about",
-  image: "/images/moreabout/aboutme-photo.png",
+  image: SOCIAL_IMAGE,
   keywords: [
     "Sarah Aliriel Dumitrache",
     "designer Póvoa de Varzim",

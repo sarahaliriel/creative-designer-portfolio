@@ -1,9 +1,10 @@
 import type { Metadata } from "next"
 
 export const SITE_NAME = "Sarah Aliriel Dumitrache"
-export const SITE_TITLE = "Sarah Aliriel Dumitrache | Design, Vídeo & Frontend"
+export const SITE_TITLE = "Sarah Aliriel Dumitrache | Designer, Video Editor & Frontend Developer"
 export const SITE_DESCRIPTION =
-  "Portfólio de Sarah Aliriel Dumitrache, designer, editora de vídeo e desenvolvedora frontend em Póvoa de Varzim, Portugal."
+  "Creative portfolio of Sarah Aliriel Dumitrache, combining design, video editing and frontend development to create distinctive digital experiences."
+export const SOCIAL_IMAGE = "/images/branding/preview-hero-seo.png"
 
 export const SOCIAL_LINKS = [
   "https://www.instagram.com/chazinhodociel/",
@@ -39,7 +40,7 @@ export function createPageMetadata({
   title,
   description,
   path,
-  image = "/images/profile/signature-sarah-aliriel.png",
+  image = SOCIAL_IMAGE,
   keywords = [],
 }: PageMetadata): Metadata {
   const canonical = absoluteUrl(path)
@@ -74,7 +75,7 @@ export const personSchema = {
   name: SITE_NAME,
   alternateName: "Sarah Aliriel",
   url: siteUrl,
-  image: absoluteUrl("/images/moreabout/aboutme-photo.png"),
+  image: absoluteUrl("/images/moreabout/sarah-aliriel-photo.jpeg"),
   jobTitle: ["Designer", "Editora de Vídeo", "Desenvolvedora Frontend"],
   email: "mailto:dumitrachebusiness@gmail.com",
   address: {
