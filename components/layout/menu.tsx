@@ -192,7 +192,9 @@ export default function Menu() {
   if (!mounted) return null
 
   const routeActiveItem = MENU_NAVIGATION_ITEMS.find(isActive)
-  const activeItemId = highlightedItemId ?? routeActiveItem?.id ?? null
+  // Hovering a link should only play its RollingText animation. The visual
+  // selection remains tied to the current route/section at all times.
+  const activeItemId = routeActiveItem?.id ?? null
   const highlightItem = (itemId: string) => setHighlightedItemId(itemId)
   const clearHighlightedItem = (itemId: string) => {
     setHighlightedItemId((current) => current === itemId ? null : current)
@@ -334,14 +336,6 @@ export default function Menu() {
                           data-menu-item={item.id}
                           type="button"
                           aria-current={active && item.navigation === "route" ? "page" : undefined}
-                          onPointerEnter={(event) => {
-                            if (event.pointerType === "mouse") highlightItem(item.id)
-                          }}
-                          onPointerLeave={(event) => {
-                            if (event.pointerType === "mouse") clearHighlightedItem(item.id)
-                          }}
-                          onFocus={() => highlightItem(item.id)}
-                          onBlur={() => clearHighlightedItem(item.id)}
                           onClick={() => navigate(item)}
                           className={`group flex w-full flex-col items-center py-0 text-center transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[#552f22] sm:grid sm:grid-cols-[3rem_1fr] sm:items-start sm:gap-x-2.5 sm:py-3 sm:text-left md:grid-cols-[3.75rem_1fr] md:py-[clamp(.65rem,1.5vh,1.15rem)] ${active ? "text-[#e8e7e7]" : "text-[#e8e7e7]/46 hover:text-[#e8e7e7]/64 focus-visible:text-[#e8e7e7]/64 sm:text-[#e8e7e7]/30"}`}
                         >
