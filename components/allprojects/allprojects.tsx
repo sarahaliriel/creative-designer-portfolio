@@ -382,7 +382,7 @@ export default function AllProjects() {
 
           <div className="grid min-w-0 grid-cols-2 gap-x-5 gap-y-1.5 text-[11px] uppercase tracking-[0.14em] text-[#1e1e1e]/58 sm:text-[12px] lg:mx-auto lg:w-full lg:max-w-295 lg:self-end">
             <span>{t("allprojectsFormatLabel")}</span>
-            <span className="text-right text-[#1800ad]">{category.title}</span>
+            <span className="text-right text-[#552f22]">{category.title}</span>
             <span>{t("allprojectsActiveLabel")}</span>
             <span className="text-right tabular-nums">
               {pad2(idx + 1)} / {pad2(total)}
@@ -397,9 +397,9 @@ export default function AllProjects() {
             <div className="mx-auto flex min-h-0 w-full max-w-295 flex-1 flex-col">
               <div className="grid shrink-0 gap-3 lg:grid-cols-[minmax(0,1fr)_320px] lg:items-end">
                 <div key={`meta-${current.id}`} className="transition-all duration-500 animate-[apFadeUp_520ms_cubic-bezier(.2,.9,.2,1)_both]">
-                  <div className="flex items-center gap-3 text-[12px] uppercase tracking-[0.18em] text-[#1800ad]">
+                  <div className="flex items-center gap-3 text-[12px] uppercase tracking-[0.18em] text-[#552f22]">
                     <span>{current.id}</span>
-                    <span className="h-px w-12 bg-[#1800ad]/45" />
+                    <span className="h-px w-12 bg-[#552f22]/45" />
                     <span>{current.year}</span>
                   </div>
                   <h2 className="mt-2 max-w-[18ch] truncate text-[34px] font-semibold leading-[0.96] tracking-[0] sm:text-[48px] lg:text-[62px]">{current.title}</h2>

@@ -272,7 +272,7 @@ export default function Menu() {
                 className="pointer-events-none fixed inset-0"
                 style={{
                   backgroundImage:
-                    "radial-gradient(circle at 50% 88%, rgba(24,0,173,.12), transparent 34%), repeating-radial-gradient(circle at 50% 50%, rgba(232,231,231,.018) 0, rgba(232,231,231,.018) .5px, transparent .8px, transparent 3px)",
+                    "radial-gradient(circle at 50% 88%, rgba(139,107,92,.14), transparent 34%), repeating-radial-gradient(circle at 50% 50%, rgba(232,231,231,.018) 0, rgba(232,231,231,.018) .5px, transparent .8px, transparent 3px)",
                 }}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 0.5 }}
@@ -343,9 +343,9 @@ export default function Menu() {
                           onFocus={() => highlightItem(item.id)}
                           onBlur={() => clearHighlightedItem(item.id)}
                           onClick={() => navigate(item)}
-                          className={`group flex w-full flex-col items-center py-0 text-center transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[#1800ad] sm:grid sm:grid-cols-[3rem_1fr] sm:items-start sm:gap-x-2.5 sm:py-3 sm:text-left md:grid-cols-[3.75rem_1fr] md:py-[clamp(.65rem,1.5vh,1.15rem)] ${active ? "text-[#e8e7e7]" : "text-[#e8e7e7]/46 hover:text-[#e8e7e7]/64 focus-visible:text-[#e8e7e7]/64 sm:text-[#e8e7e7]/30"}`}
+                          className={`group flex w-full flex-col items-center py-0 text-center transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[#552f22] sm:grid sm:grid-cols-[3rem_1fr] sm:items-start sm:gap-x-2.5 sm:py-3 sm:text-left md:grid-cols-[3.75rem_1fr] md:py-[clamp(.65rem,1.5vh,1.15rem)] ${active ? "text-[#e8e7e7]" : "text-[#e8e7e7]/46 hover:text-[#e8e7e7]/64 focus-visible:text-[#e8e7e7]/64 sm:text-[#e8e7e7]/30"}`}
                         >
-                          <span className={`mb-1 text-[8px] tabular-nums tracking-[0.18em] [@media(max-width:639px)_and_(max-height:640px)]:mb-0 sm:mb-0 sm:pt-1 sm:text-[9px] ${active ? "font-semibold text-[#7770ff]" : "text-current"}`}>
+                          <span className={`mb-1 text-[8px] tabular-nums tracking-[0.18em] [@media(max-width:639px)_and_(max-height:640px)]:mb-0 sm:mb-0 sm:pt-1 sm:text-[9px] ${active ? "font-semibold text-[#8b6b5c]" : "text-current"}`}>
                             {item.number}
                           </span>
                           <span className="w-full">
@@ -385,7 +385,7 @@ export default function Menu() {
                     <span className="block text-[#e8e7e7]/48 sm:text-right">{t("moreAboutFooterSocials")}</span>
                     <div className="mt-1 flex flex-wrap justify-center gap-x-2 gap-y-0 tracking-normal sm:mt-2 sm:justify-end sm:gap-x-5 sm:gap-y-2">
                       {SOCIALS.map((social) => (
-                        <a key={social.label} href={social.href} target="_blank" rel="noreferrer" className="link-underline-invert inline-flex min-h-8 items-center px-1 normal-case text-[#e8e7e7]/82 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1800ad] sm:min-h-0 sm:px-0">
+                        <a key={social.label} href={social.href} target="_blank" rel="noreferrer" className="link-underline-invert inline-flex min-h-8 items-center px-1 normal-case text-[#e8e7e7]/82 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#552f22] sm:min-h-0 sm:px-0">
                           <RollingText variant="subtle">{social.label}</RollingText>
                         </a>
                       ))}
@@ -402,7 +402,7 @@ export default function Menu() {
   )
 }
 
-const objectImageClassName = "h-auto w-full select-none opacity-100 brightness-[.98] contrast-105 saturate-95 drop-shadow-[0_16px_24px_rgba(0,0,0,0.2)] transition-[scale,filter] duration-300 ease-out group-hover/object:scale-[1.02] group-hover/object:drop-shadow-[0_16px_26px_rgba(119,112,255,0.18)]"
+const objectImageClassName = "h-auto w-full select-none opacity-100 brightness-[.98] contrast-105 saturate-95 drop-shadow-[0_16px_24px_rgba(0,0,0,0.2)] transition-[scale,filter] duration-300 ease-out group-hover/object:scale-[1.02] group-hover/object:drop-shadow-[0_16px_26px_rgba(139,107,92,0.18)]"
 
 type MenuObjectId = "headphones" | "tea" | "macbook" | "tablet"
 
@@ -891,7 +891,7 @@ function MenuObjects({
               width={1080}
               height={1350}
               draggable={false}
-              className={`${objectImageClassName} ${active ? "scale-[1.025] drop-shadow-[0_16px_26px_rgba(119,112,255,0.2)]" : ""}`}
+              className={`${objectImageClassName} ${active ? "scale-[1.025] drop-shadow-[0_16px_26px_rgba(139,107,92,0.2)]" : ""}`}
             />
           </div>
           <div

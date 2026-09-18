@@ -70,6 +70,7 @@ type FinalCtaContentProps = {
   interactive?: boolean
   animateReveal?: boolean
   theme?: "light" | "dark"
+  buttonTheme?: "light" | "dark"
 }
 
 export default function FinalCtaContent({
@@ -82,6 +83,7 @@ export default function FinalCtaContent({
   interactive = true,
   animateReveal = true,
   theme = "light",
+  buttonTheme,
 }: FinalCtaContentProps) {
   const { lang, t } = useI18n()
   const resumeFile = getResumeFile(lang)
@@ -94,6 +96,7 @@ export default function FinalCtaContent({
     ? { variants: reveal, initial: "hidden" as const, whileInView: "show" as const, viewport: { once: true, amount: 0.18 } }
     : {}
   const isDark = theme === "dark"
+  const isDarkButton = buttonTheme === "dark" || isDark
   const mutedInk = isDark ? "text-[#e8e7e7]/48" : "text-[#1e1e1e]/48"
   const detailInk = isDark ? "text-[#e8e7e7]/82" : "text-[#1e1e1e]/82"
   const pillClassName = `group relative inline-flex h-13 w-full max-w-sm items-center justify-center overflow-hidden rounded-full border px-5 text-center text-[11px] font-medium transition-[border-color,color,transform] duration-500 ease-[cubic-bezier(.16,1,.3,1)] hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-4 sm:h-16 sm:w-72 sm:px-7 sm:text-[13px] lg:h-18 ${
@@ -162,9 +165,9 @@ export default function FinalCtaContent({
                     href="mailto:dumitrachebusiness@gmail.com"
                     aria-label={button}
                     tabIndex={interactive ? undefined : -1}
-                    className={`group relative inline-flex aspect-square w-34 items-center justify-center overflow-hidden rounded-full bg-[#1800ad] p-5 text-center font-display text-[11px] font-semibold uppercase leading-tight text-[#e8e7e7] transition-[transform,box-shadow,color] duration-700 hover:scale-[1.07] focus-visible:outline-2 focus-visible:outline-offset-4 sm:w-[clamp(112px,13vw,202px)] sm:text-[clamp(.68rem,.9vw,.88rem)] ${isDark ? "hover:text-[#1800ad] focus-visible:outline-[#e8e7e7]" : "focus-visible:outline-[#1e1e1e]"}`}
+                    className={`group relative inline-flex aspect-square w-34 items-center justify-center overflow-hidden rounded-full bg-[#552f22] p-5 text-center font-display text-[11px] font-semibold uppercase leading-tight text-[#e8e7e7] transition-[transform,box-shadow,color] duration-700 hover:scale-[1.07] focus-visible:outline-2 focus-visible:outline-offset-4 sm:w-[clamp(112px,13vw,202px)] sm:text-[clamp(.68rem,.9vw,.88rem)] ${isDarkButton ? "hover:text-[#552f22] focus-visible:outline-[#e8e7e7]" : "focus-visible:outline-[#1e1e1e]"}`}
                   >
-                    <span aria-hidden="true" className={`absolute inset-0 origin-bottom scale-y-0 rounded-full transition-transform duration-700 ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-y-100 ${isDark ? "bg-[#e8e7e7]" : "bg-[#1e1e1e]"}`} />
+                    <span aria-hidden="true" className={`absolute inset-0 origin-bottom scale-y-0 rounded-full transition-transform duration-700 ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-y-100 ${isDarkButton ? "bg-[#e8e7e7]" : "bg-[#1e1e1e]"}`} />
                     <span className="relative z-10 flex flex-col items-center gap-1.5 sm:flex-row sm:gap-2.5">
                       <span className="max-w-[10ch] whitespace-normal leading-[1.05] tracking-[0.02em] sm:hidden">{button}</span>
                       <span className="hidden sm:inline-block">

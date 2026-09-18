@@ -83,6 +83,7 @@ export default function ProjectToCtaTransition() {
           id="home-final-cta"
           titleLines={[t("projectCtaLine1"), t("projectCtaLine2")]}
           button={t("moreAboutCtaButton")}
+          buttonTheme="dark"
           buttonAnchorRef={buttonAnchorRef}
           interactive={reduceMotion || contentActive}
           animateReveal={false}

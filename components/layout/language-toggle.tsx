@@ -97,7 +97,7 @@ export default function LanguageToggle() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0, y: reducedMotion ? 0 : -3 }}
               transition={{ duration: reducedMotion ? 0.08 : 0.2 }}
-              className="group grid h-9 w-12 place-items-center rounded-[18px] text-[10px] font-semibold tracking-[0.16em] transition-colors duration-300 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1800ad] active:text-white/70"
+              className="group grid h-9 w-12 place-items-center rounded-[18px] text-[10px] font-semibold tracking-[0.16em] transition-colors duration-300 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#552f22] active:text-white/70"
             >
               <span className="transition-transform duration-500 ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.06]">
                 {current.short}
@@ -123,7 +123,7 @@ export default function LanguageToggle() {
                   type="button"
                   onClick={() => setOpen(false)}
                   aria-label={t("langClose")}
-                  className="-mr-2 -mt-2 grid size-8 place-items-center rounded-full text-lg font-light text-white/35 transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-[#1800ad]"
+                  className="-mr-2 -mt-2 grid size-8 place-items-center rounded-full text-lg font-light text-white/35 transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-[#552f22]"
                 >
                   <span aria-hidden="true">×</span>
                 </button>
@@ -159,10 +159,10 @@ export default function LanguageToggle() {
                       }}
                       className="group relative flex min-h-10 w-full items-center gap-3 text-left text-[13px] text-white/55 focus-visible:outline-none focus-visible:text-white"
                     >
-                      <span className={`size-1.5 shrink-0 rounded-full bg-[#1800ad] transition-[opacity,transform] duration-300 ${active ? "scale-100 opacity-100" : "scale-0 opacity-0"}`} />
+                      <span className={`size-1.5 shrink-0 rounded-full bg-[#552f22] transition-[opacity,transform] duration-300 ${active ? "scale-100 opacity-100" : "scale-0 opacity-0"}`} />
                       <span className={`relative transition-[color,font-weight,transform] duration-500 ease-[cubic-bezier(.16,1,.3,1)] group-hover:translate-x-1 group-hover:scale-[1.025] group-hover:text-white group-focus-visible:translate-x-1 ${active ? "font-semibold text-[#e8e7e7]" : "font-normal"}`}>
                         {language.label}
-                        <span className="absolute -bottom-1 left-0 h-px w-full origin-left scale-x-0 bg-[#1800ad] transition-transform duration-500 ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-x-100 group-focus-visible:scale-x-100" />
+                        <span className="absolute -bottom-1 left-0 h-px w-full origin-left scale-x-0 bg-[#552f22] transition-transform duration-500 ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-x-100 group-focus-visible:scale-x-100" />
                       </span>
                     </motion.button>
                   )

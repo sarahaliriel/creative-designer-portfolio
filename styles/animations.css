@@ -175,9 +175,9 @@
 
 
 @keyframes introDotPulse{
-  0%{ transform: scale(1); box-shadow: 0 0 0 10px rgba(24, 0, 173, 0.12); }
-  50%{ transform: scale(1.35); box-shadow: 0 0 0 16px rgba(24, 0, 173, 0.06); }
-  100%{ transform: scale(1); box-shadow: 0 0 0 10px rgba(24, 0, 173, 0.12); }
+  0%{ transform: scale(1); box-shadow: 0 0 0 10px rgba(85, 47, 34, 0.12); }
+  50%{ transform: scale(1.35); box-shadow: 0 0 0 16px rgba(85, 47, 34, 0.06); }
+  100%{ transform: scale(1); box-shadow: 0 0 0 10px rgba(85, 47, 34, 0.12); }
 }
 
 
@@ -235,7 +235,7 @@
   z-index: -1;
   background:
     radial-gradient(circle at 32% 27%, rgba(255,255,255,.18), transparent 23%),
-    radial-gradient(circle at 35% 30%, #2c18ff 0%, #1800ad 55%, #10006f 100%);
+    radial-gradient(circle at 35% 30%, #754436 0%, #552f22 55%, #2c1710 100%);
   animation: narrativeOrbBreathe 7.6s cubic-bezier(.42, 0, .24, 1) infinite;
 }
 

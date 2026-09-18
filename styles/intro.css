@@ -53,7 +53,7 @@
   height: 10px;
   border-radius: 9999px;
   background: var(--accent);
-  box-shadow: 0 0 0 10px rgba(24, 0, 173, 0.14);
+  box-shadow: 0 0 0 10px rgba(85, 47, 34, 0.14);
   animation: introDotPulse 1200ms cubic-bezier(.2,.9,.2,1) infinite;
   transform: translateZ(0);
 }

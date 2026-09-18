@@ -101,7 +101,7 @@ export default function CustomCursor() {
 
   const cursorNode = (
     <div ref={cursorRef} className="pointer-events-none fixed left-0 top-0 z-30000">
-      <div className="size-2.5 rounded-full bg-[#1800ad]" />
+      <div className="size-2.5 rounded-full bg-[#552f22]" />
     </div>
   )
 

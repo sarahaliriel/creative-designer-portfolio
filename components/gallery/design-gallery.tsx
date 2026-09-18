@@ -39,21 +39,21 @@ function GalleryHero({ projectCount, pieceCount }: { projectCount: number; piece
       <p
         aria-hidden="true"
         className="pointer-events-none absolute left-[3.3vw] top-[21svh] -z-10 hidden w-[80vw] font-sans text-[15.2vw] font-black uppercase leading-none text-transparent lg:block"
-        style={{ WebkitTextStroke: "2px rgba(24, 0, 173, 0.075)" }}
+        style={{ WebkitTextStroke: "2px rgba(85, 47, 34, 0.075)" }}
       >
         {t("galleryArchiveGhost")}
       </p>
       <p
         aria-hidden="true"
         className="pointer-events-none absolute -left-[0.08em] top-[16svh] -z-10 font-sans text-[32vw] font-black uppercase leading-none text-transparent sm:text-[24vw] lg:hidden"
-        style={{ WebkitTextStroke: "1px rgba(24, 0, 173, 0.08)" }}
+        style={{ WebkitTextStroke: "1px rgba(85, 47, 34, 0.08)" }}
       >
         {t("galleryArchiveGhost")}
       </p>
 
       <div className="grid grid-cols-[1fr_auto] items-start gap-6 pr-20 text-[10px] font-black uppercase tracking-[0.22em] text-[#1e1e1e]/50 sm:grid-cols-3 sm:pr-22">
         <span>{t("galleryHeroArchiveLabel")}</span>
-        <span className="hidden justify-self-center text-[#1800ad] sm:block">{t("galleryHeroSocialArchive")}</span>
+        <span className="hidden justify-self-center text-[#552f22] sm:block">{t("galleryHeroSocialArchive")}</span>
         <span className="justify-self-end">2025 - 2026</span>
       </div>
 
@@ -69,7 +69,7 @@ function GalleryHero({ projectCount, pieceCount }: { projectCount: number; piece
             href="#selected-projects"
             aria-label={t("gallerySelectedTitle")}
             onClick={scrollToSection}
-            className="group inline-flex w-max items-center gap-5 text-[10px] font-black uppercase tracking-[0.16em] text-[#1e1e1e]/78 transition hover:text-[#1800ad] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1800ad] sm:text-[11px]"
+            className="group inline-flex w-max items-center gap-5 text-[10px] font-black uppercase tracking-[0.16em] text-[#1e1e1e]/78 transition hover:text-[#552f22] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#552f22] sm:text-[11px]"
           >
             <span className="transition group-hover:translate-y-1">
               <ArrowDownRight />
@@ -83,12 +83,12 @@ function GalleryHero({ projectCount, pieceCount }: { projectCount: number; piece
               <dt className="order-2">{t("galleryHeroProjectsLabel")}</dt>
               <dd className="order-1 text-base leading-none text-[#1e1e1e]">{String(projectCount).padStart(2, "0")}</dd>
             </div>
-            <span aria-hidden="true" className="hidden size-1.5 rounded-full bg-[#1800ad] sm:block" />
+            <span aria-hidden="true" className="hidden size-1.5 rounded-full bg-[#552f22] sm:block" />
             <div className="grid gap-1 border-b border-[#1e1e1e]/10 py-3 sm:border-b-0 sm:justify-self-center sm:py-0">
               <dt className="order-2">{t("galleryHeroPiecesLabel")}</dt>
               <dd className="order-1 text-base leading-none text-[#1e1e1e]">{String(pieceCount).padStart(2, "0")}</dd>
             </div>
-            <span aria-hidden="true" className="hidden size-1.5 rounded-full bg-[#1800ad] sm:block" />
+            <span aria-hidden="true" className="hidden size-1.5 rounded-full bg-[#552f22] sm:block" />
             <div className="grid gap-1 py-3 sm:justify-self-end sm:py-0">
               <dt className="order-2">{t("galleryHeroOrderLabel")}</dt>
               <dd className="order-1 text-base leading-none text-[#1e1e1e]">{t("galleryHeroOrderValue")}</dd>
@@ -109,13 +109,13 @@ function SelectedProjectsIntro({ projectCount }: { projectCount: number }) {
         <p
           aria-hidden="true"
           className="pointer-events-none absolute left-[8vw] top-[-0.26em] -z-10 hidden font-sans text-[15vw] font-black leading-none text-transparent lg:block"
-          style={{ WebkitTextStroke: "2px rgba(24, 0, 173, 0.07)" }}
+          style={{ WebkitTextStroke: "2px rgba(85, 47, 34, 0.07)" }}
         >
           {String(projectCount).padStart(2, "0")}
         </p>
 
         <div>
-          <p className="text-[10px] font-black uppercase tracking-[0.22em] text-[#1800ad]">{t("gallerySelectedEyebrow")}</p>
+          <p className="text-[10px] font-black uppercase tracking-[0.22em] text-[#552f22]">{t("gallerySelectedEyebrow")}</p>
           <h2 className="mt-5 max-w-[9ch] text-[clamp(3.35rem,12vw,6.4rem)] font-black leading-[0.92] text-[#030303] sm:text-[clamp(5.2rem,8.2vw,7.5rem)] lg:text-[clamp(4.6rem,6.2vw,6.8rem)]">
             {t("gallerySelectedTitle")}
           </h2>
@@ -128,7 +128,7 @@ function SelectedProjectsIntro({ projectCount }: { projectCount: number }) {
           <a
             href="#gallery-projects"
             onClick={scrollToSection}
-            className="group mt-6 inline-flex w-max items-center gap-3 text-[10px] font-black uppercase tracking-[0.16em] text-[#1800ad] transition hover:text-[#1e1e1e] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1800ad] sm:text-[11px]"
+            className="group mt-6 inline-flex w-max items-center gap-3 text-[10px] font-black uppercase tracking-[0.16em] text-[#552f22] transition hover:text-[#1e1e1e] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#552f22] sm:text-[11px]"
           >
             <span className="transition group-hover:translate-y-1">
               <ArrowDownRight />
@@ -150,7 +150,7 @@ function SelectedProjectCard({ project, index }: { project: GalleryProject; inde
     <article className="border-b border-[#1e1e1e]/12 pb-9 lg:border-b-0 lg:pb-0">
       <div className="mb-3 grid grid-cols-[1fr_auto] items-end gap-4">
         <div>
-          <p className="text-[11px] font-black uppercase tracking-[0.18em] text-[#1800ad]">{String(index + 1).padStart(2, "0")}</p>
+          <p className="text-[11px] font-black uppercase tracking-[0.18em] text-[#552f22]">{String(index + 1).padStart(2, "0")}</p>
           <h2 className="mt-2 text-[clamp(1.55rem,5vw,2rem)] font-black leading-none text-[#030303]">{project.name}</h2>
         </div>
         <span className="pb-1 text-[10px] font-black uppercase tracking-[0.16em] text-[#1e1e1e]/46">{pieceCount} {t("galleryPieceCountLabel")}</span>
@@ -160,7 +160,7 @@ function SelectedProjectCard({ project, index }: { project: GalleryProject; inde
         <Link
           href={`/gallery/${project.slug}`}
           aria-label={`${t("galleryViewMorePieces")}: ${project.name}`}
-          className="group block overflow-hidden focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1800ad]"
+          className="group block overflow-hidden focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#552f22]"
         >
           <span className="relative block aspect-[2.45/1] lg:aspect-square">
             <Image
@@ -182,7 +182,7 @@ function SelectedProjectCard({ project, index }: { project: GalleryProject; inde
       <p className="mt-5 hidden text-base leading-relaxed text-[#1e1e1e]/62 lg:block">{project.description}</p>
       <Link
         href={`/gallery/${project.slug}`}
-        className="mt-6 inline-flex items-center gap-3 text-[11px] font-black uppercase tracking-[0.18em] text-[#1800ad] transition hover:gap-5 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1800ad]"
+        className="mt-6 inline-flex items-center gap-3 text-[11px] font-black uppercase tracking-[0.18em] text-[#552f22] transition hover:gap-5 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#552f22]"
       >
         <RollingText>{t("galleryViewMorePieces")}</RollingText> <span aria-hidden="true">→</span>
       </Link>
@@ -236,7 +236,7 @@ function PlaygroundSection({ pieces }: { pieces: GalleryImage[] }) {
         </h2>
         <div className="lg:justify-self-end">
           <p className="max-w-[44ch] text-base font-semibold leading-relaxed text-[#1e1e1e]/62 sm:text-lg">{t("galleryPlaygroundDescription")}</p>
-          <p className="mt-6 text-[10px] font-black uppercase tracking-[0.22em] text-[#1800ad]">
+          <p className="mt-6 text-[10px] font-black uppercase tracking-[0.22em] text-[#552f22]">
             {String(pieces.length).padStart(2, "0")} {t("galleryPlaygroundCount")}
           </p>
         </div>

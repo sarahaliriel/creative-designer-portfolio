@@ -177,7 +177,7 @@ function NarrativeOrbAnimation() {
   const glow = useTransform(
     proximitySpring,
     [0, 1],
-    ["0 18px 52px rgba(24, 0, 173, 0.28)", "0 22px 72px rgba(24, 0, 173, 0.48)"]
+    ["0 18px 52px rgba(85, 47, 34, 0.28)", "0 22px 72px rgba(85, 47, 34, 0.48)"]
   )
   const rippleOpacity = useTransform(proximitySpring, [0, 1], [0, 0.34])
   const rippleScale = useTransform(proximitySpring, [0, 1], [0.76, 1.12])

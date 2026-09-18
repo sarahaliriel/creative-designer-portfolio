@@ -3,7 +3,7 @@
   --text: #1e1e1e;
   --muted: rgba(30,30,30,.72);
   --hairline: rgba(30,30,30,.16);
-  --accent: #1800ad;
+  --accent: #552f22;
 
 }
 
@@ -85,7 +85,7 @@ body {
 
 
 ::selection {
-  background: rgba(24, 0, 173, 0.18);
+  background: rgba(85, 47, 34, 0.18);
 }
 
 
@@ -148,7 +148,7 @@ a {
   width: 6px;
   height: 6px;
   border-radius: 999px;
-  background: rgba(24, 0, 173, 1);
+  background: rgba(85, 47, 34, 1);
   opacity: 0;
 }
 
@@ -163,7 +163,7 @@ a {
   position: absolute;
   inset: 0;
   border-radius: 999px;
-  background: rgba(24, 0, 173, 1);
+  background: rgba(85, 47, 34, 1);
   opacity: 0;
 }
 

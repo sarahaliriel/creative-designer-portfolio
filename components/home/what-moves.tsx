@@ -40,7 +40,7 @@ function MovingWord({
 
   return (
     <motion.span
-      className={emphasized ? "inline-block font-black text-[#1800ad]" : "inline-block"}
+      className={emphasized ? "inline-block font-black text-[#552f22]" : "inline-block"}
       style={{ opacity, y, filter }}
     >
       {word}
@@ -94,7 +94,7 @@ function MagneticAboutButton({ reducedMotion }: { reducedMotion: boolean }) {
         onPointerMove={handlePointerMove}
         onPointerLeave={resetPosition}
         onBlur={resetPosition}
-        className="group relative inline-flex aspect-square w-[clamp(132px,38vw,156px)] items-center justify-center overflow-hidden rounded-full border border-transparent bg-[#1800ad] p-5 text-center font-display text-[clamp(.72rem,.9vw,.88rem)] font-semibold uppercase leading-tight text-[#e8e7e7] transition-[transform,box-shadow,color] duration-700 ease-[cubic-bezier(.16,1,.3,1)] hover:text-[#1800ad] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1800ad] sm:w-[clamp(158px,12vw,188px)]"
+        className="group relative inline-flex aspect-square w-[clamp(132px,38vw,156px)] items-center justify-center overflow-hidden rounded-full border border-transparent bg-[#552f22] p-5 text-center font-display text-[clamp(.72rem,.9vw,.88rem)] font-semibold uppercase leading-tight text-[#e8e7e7] transition-[transform,box-shadow,color] duration-700 ease-[cubic-bezier(.16,1,.3,1)] hover:text-[#552f22] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#552f22] sm:w-[clamp(158px,12vw,188px)]"
       >
         <span
           className="absolute inset-0 origin-bottom scale-y-0 rounded-full bg-[#e8e7e7] transition-transform duration-700 ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-y-100"

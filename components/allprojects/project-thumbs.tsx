@@ -48,14 +48,14 @@ export function ProjectThumbs({ activeIndex, categories, onSelect, projects, rai
                 className={[
                   "ap-rail-item group grid w-53.5 shrink-0 snap-center border-t pt-2.5 text-left transition-all duration-500 sm:w-58.75 lg:absolute lg:left-0 lg:top-1/2 lg:w-full lg:border-t-0 lg:pt-0",
                   hiddenOnDesktop ? "lg:pointer-events-none lg:opacity-0" : "",
-                  on ? "border-[#1800ad] opacity-100" : "border-[#1e1e1e]/18 opacity-48 hover:opacity-85",
+                  on ? "border-[#552f22] opacity-100" : "border-[#1e1e1e]/18 opacity-48 hover:opacity-85",
                 ].join(" ")}
                 aria-current={on ? "true" : undefined}
                 aria-label={`${t("allprojectsSelectEdit")} ${project.id}`}
               >
                 <div className="min-w-0">
                   <div className="flex items-baseline gap-3">
-                    <span className={["text-[11px] tabular-nums transition-colors duration-300", on ? "text-[#1800ad]" : "text-[#1e1e1e]/45"].join(" ")}>
+                    <span className={["text-[11px] tabular-nums transition-colors duration-300", on ? "text-[#552f22]" : "text-[#1e1e1e]/45"].join(" ")}>
                       {project.id}
                     </span>
                     <span className={["truncate text-[13px] font-medium leading-tight sm:text-[14px] lg:text-[15px]", on ? "lg:opacity-100" : "lg:opacity-0 lg:group-hover:opacity-100"].join(" ")}>

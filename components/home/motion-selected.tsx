@@ -62,7 +62,7 @@ function MotionCard({
 
             <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,.08),rgba(0,0,0,.76))]" />
             <div className="absolute left-4 top-4 flex items-center gap-2 sm:left-5 sm:top-5">
-              <span className="h-2 w-2 rounded-full bg-[#1800ad] shadow-[0_0_18px_rgba(24,0,173,.8)]" />
+              <span className="h-2 w-2 rounded-full bg-[#552f22] shadow-[0_0_18px_rgba(85,47,34,.8)]" />
               <span className="text-[9px] font-semibold uppercase tracking-[0.22em] text-[#e8e7e7]/70">
                 {project.id}
               </span>
@@ -102,18 +102,18 @@ export default function MotionSelected() {
           transition={{ duration: 0.86, ease: EASE }}
           className="relative border-b border-[#e8e7e7]/12 pb-12 sm:pb-16"
         >
-          <div className="flex justify-end text-[9px] font-semibold uppercase tracking-[0.24em] text-[#e8e7e7]/46 sm:text-[10px]">
+          <div className="relative z-10 flex justify-end text-[9px] font-semibold uppercase tracking-[0.24em] text-[#e8e7e7]/46 sm:text-[10px]">
             <span>{t("motionSelectedKicker")}</span>
           </div>
           <div className="relative mt-9 isolate">
-            <span aria-hidden="true" className="pointer-events-none absolute -top-[0.08em] left-[10vw] -z-10 whitespace-nowrap font-display text-[clamp(4rem,14vw,12rem)] leading-none tracking-[-0.08em] text-[#5e4cff]/9 blur-[1.5px] mask-[linear-gradient(90deg,transparent,black_18%,black_72%,transparent)]">
+            <span aria-hidden="true" className="pointer-events-none absolute -top-[0.08em] left-[10vw] z-0 whitespace-nowrap font-display text-[clamp(4rem,14vw,12rem)] leading-none tracking-[-0.08em] text-[#8b6b5c]/32 blur-[1.5px] mask-[linear-gradient(90deg,transparent,black_18%,black_72%,transparent)]">
               Motion
             </span>
-            <h2 className="relative max-w-6xl text-balance font-display text-[clamp(3.3rem,10.5vw,9.5rem)] font-semibold leading-[0.84] tracking-[-0.075em]">
+            <h2 className="relative z-10 max-w-6xl text-balance font-display text-[clamp(3.3rem,10.5vw,9.5rem)] font-semibold leading-[0.84] tracking-[-0.075em]">
               {t("motionSelectedTitle")}
             </h2>
           </div>
-          <p className="mt-9 max-w-xl text-sm leading-relaxed text-[#e8e7e7]/52 sm:ml-auto sm:text-base">
+          <p className="relative z-10 mt-9 max-w-xl text-sm leading-relaxed text-[#e8e7e7]/52 sm:ml-auto sm:text-base">
             {t("motionSelectedCopy")}
           </p>
         </motion.header>

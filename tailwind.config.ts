@@ -11,7 +11,7 @@ export default {
       colors: {
         base: "#e8e7e7",
         ink: "#1e1e1e",
-        detail: "#1800ad",
+        detail: "#552f22",
       },
       fontFamily: {
         sans: ["var(--font-sans)"],
