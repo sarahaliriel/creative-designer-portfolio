@@ -106,9 +106,9 @@ export default function ScrollProgress({ progress }: ScrollProgressProps) {
 
   if (!isVisible || menuOpen) return null
 
-  const foreground = theme === "dark" ? "text-[#e8e7e7]" : "text-[var(--accent)]"
-  const progressColor = theme === "dark" ? "bg-[#e8e7e7]" : "bg-[var(--accent)]"
-  const trackColor = theme === "dark" ? "bg-[#e8e7e7]/25" : "bg-ink/20"
+  const foreground = theme === "dark" ? "text-[#f4f2ec]" : "text-[var(--accent)]"
+  const progressColor = theme === "dark" ? "bg-[#f4f2ec]" : "bg-[var(--accent)]"
+  const trackColor = theme === "dark" ? "bg-[#f4f2ec]/25" : "bg-ink/20"
 
   return (
     <div className="pointer-events-none fixed right-4 top-1/2 z-40 hidden -translate-y-1/2 sm:block">

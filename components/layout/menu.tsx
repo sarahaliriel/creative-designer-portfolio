@@ -231,17 +231,17 @@ export default function Menu() {
           whileHover={reducedMotion ? undefined : { scale: 1.035 }}
           whileTap={{ scale: 0.96 }}
           transition={{ duration: fastDuration }}
-          className="fixed right-3 top-3 z-20010 grid h-14 w-14 place-items-center rounded-full border border-white/35 bg-[#1e1e1e] shadow-[0_18px_70px_rgba(0,0,0,0.35)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#e8e7e7] focus-visible:ring-offset-2 focus-visible:ring-offset-[#1e1e1e] sm:right-5 sm:top-5 sm:h-16 sm:w-16"
+          className="fixed right-3 top-3 z-20010 grid h-14 w-14 place-items-center rounded-full border border-white/35 bg-[#1e1e1e] shadow-[0_18px_70px_rgba(0,0,0,0.35)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#f4f2ec] focus-visible:ring-offset-2 focus-visible:ring-offset-[#1e1e1e] sm:right-5 sm:top-5 sm:h-16 sm:w-16"
         >
           <span aria-hidden="true" className="relative block h-6 w-6">
             <motion.span
-              className="absolute left-0 top-1/2 h-px w-6 bg-[#e8e7e7]"
+              className="absolute left-0 top-1/2 h-px w-6 bg-[#f4f2ec]"
               initial={false}
               animate={{ rotate: menuOpen ? 45 : 0, y: menuOpen ? 0 : -4 }}
               transition={{ duration: fastDuration, ease: [0.22, 1, 0.36, 1] }}
             />
             <motion.span
-              className="absolute left-0 top-1/2 h-px w-6 bg-[#e8e7e7]"
+              className="absolute left-0 top-1/2 h-px w-6 bg-[#f4f2ec]"
               initial={false}
               animate={{ rotate: menuOpen ? -45 : 0, y: menuOpen ? 0 : 4 }}
               transition={{ duration: fastDuration, ease: [0.22, 1, 0.36, 1] }}
@@ -267,7 +267,7 @@ export default function Menu() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0, transition: { duration: fastDuration } }}
               transition={{ duration: enterDuration, ease: [0.22, 1, 0.36, 1] }}
-              className="fixed inset-0 z-9999 overflow-y-auto bg-[#1e1e1e] text-[#e8e7e7]"
+              className="fixed inset-0 z-9999 overflow-y-auto bg-[#1e1e1e] text-[#f4f2ec]"
             >
               <motion.div
                 aria-hidden="true"
@@ -298,7 +298,7 @@ export default function Menu() {
                 <div className="flex flex-1 flex-col justify-center py-2 [@media(max-width:639px)_and_(max-height:640px)]:py-0 sm:py-5 md:block md:flex-none md:py-0">
                   <motion.p
                     data-menu-safe
-                    className="mx-auto mb-3 w-full max-w-90 border-b border-[#e8e7e7]/16 pb-2 text-center text-[9px] uppercase tracking-[0.22em] text-[#e8e7e7]/42 sm:mx-0 sm:max-w-none sm:border-0 sm:pb-0 sm:text-left md:mb-4"
+                    className="mx-auto mb-3 w-full max-w-90 border-b border-[#f4f2ec]/16 pb-2 text-center text-[9px] uppercase tracking-[0.22em] text-[#f4f2ec]/42 sm:mx-0 sm:max-w-none sm:border-0 sm:pb-0 sm:text-left md:mb-4"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0, transition: { duration: fastDuration } }}
@@ -311,7 +311,7 @@ export default function Menu() {
                     ref={navigationZoneRef}
                     data-menu-safe
                     data-menu-navigation-zone
-                    className="pointer-events-auto mx-auto flex w-full max-w-120 flex-col gap-[clamp(.65rem,2.2vh,1.35rem)] [@media(max-width:639px)_and_(max-height:640px)]:gap-1 sm:block sm:max-w-none sm:divide-y sm:divide-[#e8e7e7]/16 sm:border-y sm:border-[#e8e7e7]/16"
+                    className="pointer-events-auto mx-auto flex w-full max-w-120 flex-col gap-[clamp(.65rem,2.2vh,1.35rem)] [@media(max-width:639px)_and_(max-height:640px)]:gap-1 sm:block sm:max-w-none sm:divide-y sm:divide-[#f4f2ec]/16 sm:border-y sm:border-[#f4f2ec]/16"
                   initial="closed"
                   animate="open"
                   exit="closed"
@@ -337,7 +337,7 @@ export default function Menu() {
                           type="button"
                           aria-current={active && item.navigation === "route" ? "page" : undefined}
                           onClick={() => navigate(item)}
-                          className={`group flex w-full flex-col items-center py-0 text-center transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[#552f22] sm:grid sm:grid-cols-[3rem_1fr] sm:items-start sm:gap-x-2.5 sm:py-3 sm:text-left md:grid-cols-[3.75rem_1fr] md:py-[clamp(.65rem,1.5vh,1.15rem)] ${active ? "text-[#e8e7e7]" : "text-[#e8e7e7]/46 hover:text-[#e8e7e7]/64 focus-visible:text-[#e8e7e7]/64 sm:text-[#e8e7e7]/30"}`}
+                          className={`group flex w-full flex-col items-center py-0 text-center transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[#552f22] sm:grid sm:grid-cols-[3rem_1fr] sm:items-start sm:gap-x-2.5 sm:py-3 sm:text-left md:grid-cols-[3.75rem_1fr] md:py-[clamp(.65rem,1.5vh,1.15rem)] ${active ? "text-[#f4f2ec]" : "text-[#f4f2ec]/46 hover:text-[#f4f2ec]/64 focus-visible:text-[#f4f2ec]/64 sm:text-[#f4f2ec]/30"}`}
                         >
                           <span className={`mb-1 text-[8px] tabular-nums tracking-[0.18em] [@media(max-width:639px)_and_(max-height:640px)]:mb-0 sm:mb-0 sm:pt-1 sm:text-[9px] ${active ? "font-semibold text-[#8b6b5c]" : "text-current"}`}>
                             {item.number}
@@ -347,7 +347,7 @@ export default function Menu() {
                               <RollingText variant="strong">{t(item.labelKey)}</RollingText>
                             </span>
                             {active ? (
-                              <span className="mx-auto mt-1.5 block max-w-64 text-[10px] leading-relaxed text-[#e8e7e7]/64 sm:mx-0 sm:max-w-lg md:text-[11px]">
+                              <span className="mx-auto mt-1.5 block max-w-64 text-[10px] leading-relaxed text-[#f4f2ec]/64 sm:mx-0 sm:max-w-lg md:text-[11px]">
                                 {t(item.descriptionKey)}
                               </span>
                             ) : null}
@@ -364,22 +364,22 @@ export default function Menu() {
                 <motion.footer
                   ref={footerZoneRef}
                   data-menu-footer-zone
-                  className="pointer-events-auto relative left-1/2 grid w-[calc(100vw-1.5rem)] max-w-370 -translate-x-1/2 grid-cols-2 items-end gap-x-3 gap-y-2 border-t border-[#e8e7e7]/16 pt-2.5 text-center text-[8px] uppercase tracking-widest [@media(max-width:639px)_and_(max-height:640px)]:gap-y-1 [@media(max-width:639px)_and_(max-height:640px)]:pt-2 sm:w-[calc(100vw-4rem)] sm:grid-cols-[1fr_1fr_1fr] sm:gap-6 sm:border-0 sm:pt-0 sm:text-left sm:text-[11px] sm:tracking-[0.12em] lg:w-[calc(100vw-6rem)] lg:text-xs"
+                  className="pointer-events-auto relative left-1/2 grid w-[calc(100vw-1.5rem)] max-w-370 -translate-x-1/2 grid-cols-2 items-end gap-x-3 gap-y-2 border-t border-[#f4f2ec]/16 pt-2.5 text-center text-[8px] uppercase tracking-widest [@media(max-width:639px)_and_(max-height:640px)]:gap-y-1 [@media(max-width:639px)_and_(max-height:640px)]:pt-2 sm:w-[calc(100vw-4rem)] sm:grid-cols-[1fr_1fr_1fr] sm:gap-6 sm:border-0 sm:pt-0 sm:text-left sm:text-[11px] sm:tracking-[0.12em] lg:w-[calc(100vw-6rem)] lg:text-xs"
                   initial={{ opacity: 0, y: reducedMotion ? 0 : 8 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: reducedMotion ? 0 : 4, transition: { duration: fastDuration } }}
                   transition={{ duration: reducedMotion ? 0.1 : 0.35, delay: entranceDelay(0.65) }}
                 >
                   <div data-menu-safe className="sm:text-left">
-                    <span className="block text-[#e8e7e7]/48">{t("moreAboutFooterEdition")}</span>
-                    <span className="mt-1 block tracking-normal text-[#e8e7e7]/82 sm:mt-2">2026 © Sarah Aliriel</span>
+                    <span className="block text-[#f4f2ec]/48">{t("moreAboutFooterEdition")}</span>
+                    <span className="mt-1 block tracking-normal text-[#f4f2ec]/82 sm:mt-2">2026 © Sarah Aliriel</span>
                   </div>
                   <MenuLocalTime label={t("moreAboutFooterLocalTime")} />
                   <div data-menu-safe className="col-span-2 sm:col-span-1">
-                    <span className="block text-[#e8e7e7]/48 sm:text-right">{t("moreAboutFooterSocials")}</span>
+                    <span className="block text-[#f4f2ec]/48 sm:text-right">{t("moreAboutFooterSocials")}</span>
                     <div className="mt-1 flex flex-wrap justify-center gap-x-2 gap-y-0 tracking-normal sm:mt-2 sm:justify-end sm:gap-x-5 sm:gap-y-2">
                       {SOCIALS.map((social) => (
-                        <a key={social.label} href={social.href} target="_blank" rel="noreferrer" className="link-underline-invert inline-flex min-h-8 items-center px-1 normal-case text-[#e8e7e7]/82 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#552f22] sm:min-h-0 sm:px-0">
+                        <a key={social.label} href={social.href} target="_blank" rel="noreferrer" className="link-underline-invert inline-flex min-h-8 items-center px-1 normal-case text-[#f4f2ec]/82 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#552f22] sm:min-h-0 sm:px-0">
                           <RollingText variant="subtle">{social.label}</RollingText>
                         </a>
                       ))}
@@ -962,8 +962,8 @@ function MenuLocalTime({ label }: { label: string }) {
 
   return (
     <div data-menu-safe className="text-center">
-      <span className="block text-[#e8e7e7]/48">{label}</span>
-      <time className="mt-1.5 block font-medium tabular-nums tracking-[0.08em] text-[#e8e7e7]/82 sm:mt-2">
+      <span className="block text-[#f4f2ec]/48">{label}</span>
+      <time className="mt-1.5 block font-medium tabular-nums tracking-[0.08em] text-[#f4f2ec]/82 sm:mt-2">
         {time} {zone}
       </time>
     </div>

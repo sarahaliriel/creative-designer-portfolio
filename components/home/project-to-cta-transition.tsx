@@ -70,12 +70,12 @@ export default function ProjectToCtaTransition() {
       id="contact"
       ref={sectionRef}
       data-project-cta-transition
-      className={`relative z-30 overflow-x-clip bg-[#1e1e1e] ${reduceMotion ? "min-h-svh bg-[#e8e7e7]" : "h-[280svh] sm:h-[310svh]"}`}
+      className={`relative z-30 overflow-x-clip bg-[#1e1e1e] ${reduceMotion ? "min-h-svh bg-[#f4f2ec]" : "h-[280svh] sm:h-[310svh]"}`}
     >
       <div data-orb-stage className={`${reduceMotion ? "relative" : "sticky top-0"} isolate min-h-svh w-full overflow-hidden bg-[#1e1e1e]`}>
         <motion.div
           aria-hidden="true"
-          className="absolute inset-0 bg-[#e8e7e7] will-change-[clip-path]"
+          className="absolute inset-0 bg-[#f4f2ec] will-change-[clip-path]"
           style={{ clipPath: reduceMotion ? "none" : clipPath }}
         />
 
@@ -96,7 +96,7 @@ export default function ProjectToCtaTransition() {
         {!reduceMotion ? (
           <motion.p
             aria-hidden="true"
-            className="pointer-events-none absolute bottom-8 left-1/2 z-40 -translate-x-1/2 text-[9px] font-semibold uppercase tracking-[.24em] text-[#e8e7e7] sm:bottom-10 sm:text-[10px]"
+            className="pointer-events-none absolute bottom-8 left-1/2 z-40 -translate-x-1/2 text-[9px] font-semibold uppercase tracking-[.24em] text-[#f4f2ec] sm:bottom-10 sm:text-[10px]"
             style={{ opacity: cueOpacity }}
           >
             {t("projectCtaScroll")}

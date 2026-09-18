@@ -3,7 +3,7 @@
   inset: 0;
   z-index: 99999;
   background: #1e1e1e;
-  color: #e8e7e7;
+  color: #f4f2ec;
   overflow: hidden;
   transform: translate3d(0,0,0);
   will-change: transform;

@@ -30,11 +30,11 @@
 }
 
 .darkTheme {
-  color: #e8e7e7;
+  color: #f4f2ec;
 }
 
 .darkTheme:focus-visible {
-  outline-color: #e8e7e7;
+  outline-color: #f4f2ec;
 }
 
 .icon {
@@ -105,7 +105,7 @@
 }
 
 .darkTheme.playing .bar:nth-child(3) {
-  background: #e8e7e7;
+  background: #f4f2ec;
   box-shadow: 0 0 6px rgba(232, 231, 231, 0.2);
 }
 

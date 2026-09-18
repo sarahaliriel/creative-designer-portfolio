@@ -25,7 +25,7 @@ export const metadata: Metadata = createPageMetadata({
 
 export default function Page() {
   return (
-    <main className="relative min-h-svh bg-[#e8e7e7] text-[#1e1e1e]">
+    <main className="relative min-h-svh bg-[#f4f2ec] text-[#1e1e1e]">
       <JsonLd
         data={{
           "@type": "CollectionPage",

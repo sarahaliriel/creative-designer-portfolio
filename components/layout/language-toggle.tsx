@@ -81,7 +81,7 @@ export default function LanguageToggle() {
         initial={false}
         animate={{ width: open ? 232 : 48, height: open ? 270 : 36 }}
         transition={{ duration: reducedMotion ? 0.12 : 0.48, ease: [0.16, 1, 0.3, 1] }}
-        className="relative overflow-hidden rounded-[18px] bg-[#191919] text-[#e8e7e7] ring-1 ring-white/8"
+        className="relative overflow-hidden rounded-[18px] bg-[#191919] text-[#f4f2ec] ring-1 ring-white/8"
       >
         <AnimatePresence initial={false} mode="popLayout">
           {!open ? (
@@ -114,7 +114,7 @@ export default function LanguageToggle() {
             >
               <div className="flex items-start justify-between">
                 <div>
-                  <p className="font-display text-[11px] font-semibold uppercase tracking-[0.16em] text-[#e8e7e7]">
+                  <p className="font-display text-[11px] font-semibold uppercase tracking-[0.16em] text-[#f4f2ec]">
                     {t("langLabel")}
                   </p>
                   <p className="mt-2 text-[11px] leading-relaxed text-white/45">{t("langPrompt")}</p>
@@ -160,7 +160,7 @@ export default function LanguageToggle() {
                       className="group relative flex min-h-10 w-full items-center gap-3 text-left text-[13px] text-white/55 focus-visible:outline-none focus-visible:text-white"
                     >
                       <span className={`size-1.5 shrink-0 rounded-full bg-[#552f22] transition-[opacity,transform] duration-300 ${active ? "scale-100 opacity-100" : "scale-0 opacity-0"}`} />
-                      <span className={`relative transition-[color,font-weight,transform] duration-500 ease-[cubic-bezier(.16,1,.3,1)] group-hover:translate-x-1 group-hover:scale-[1.025] group-hover:text-white group-focus-visible:translate-x-1 ${active ? "font-semibold text-[#e8e7e7]" : "font-normal"}`}>
+                      <span className={`relative transition-[color,font-weight,transform] duration-500 ease-[cubic-bezier(.16,1,.3,1)] group-hover:translate-x-1 group-hover:scale-[1.025] group-hover:text-white group-focus-visible:translate-x-1 ${active ? "font-semibold text-[#f4f2ec]" : "font-normal"}`}>
                         {language.label}
                         <span className="absolute -bottom-1 left-0 h-px w-full origin-left scale-x-0 bg-[#552f22] transition-transform duration-500 ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-x-100 group-focus-visible:scale-x-100" />
                       </span>

@@ -125,7 +125,7 @@ type ProjectControlsProps = {
 }
 
 const controlClass =
-  "grid h-11 w-11 place-items-center text-[#e8e7e7] transition-colors duration-200 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/45 sm:h-10 sm:w-10"
+  "grid h-11 w-11 place-items-center text-[#f4f2ec] transition-colors duration-200 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/45 sm:h-10 sm:w-10"
 
 export function ProjectControls({
   closeLabel,
@@ -178,7 +178,7 @@ export function ProjectControls({
             className={["absolute -top-9 z-30 transition-opacity duration-150", hoveringBar ? "opacity-100" : "opacity-0"].join(" ")}
             style={{ left: `${hoverPct * 100}%`, transform: "translateX(-50%)" }}
           >
-            <div className="bg-black/60 px-2.5 py-1 text-[11px] tracking-[0.14em] text-[#e8e7e7] backdrop-blur-md">{formatTime(hoverTime)}</div>
+            <div className="bg-black/60 px-2.5 py-1 text-[11px] tracking-[0.14em] text-[#f4f2ec] backdrop-blur-md">{formatTime(hoverTime)}</div>
           </div>
           <input
             type="range"
@@ -207,7 +207,7 @@ export function ProjectControls({
             <ProjectControlIcon name="forward" />
           </button>
 
-          <div className="min-w-23 text-[11px] tracking-[0.12em] text-[#e8e7e7]/80 tabular-nums sm:min-w-28">
+          <div className="min-w-23 text-[11px] tracking-[0.12em] text-[#f4f2ec]/80 tabular-nums sm:min-w-28">
             {formatTime(currentTime)} / {formatTime(duration)}
           </div>
 

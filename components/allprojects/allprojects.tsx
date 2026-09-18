@@ -372,7 +372,7 @@ export default function AllProjects() {
   }
 
   return (
-    <section ref={wrapRef} className="h-svh w-full overflow-hidden bg-[#e8e7e7] text-[#1e1e1e]">
+    <section ref={wrapRef} className="h-svh w-full overflow-hidden bg-[#f4f2ec] text-[#1e1e1e]">
       <ScrollProgress progress={archiveProgress} />
       <div className="mx-auto flex h-svh w-full max-w-420 flex-col overflow-hidden px-4 pb-4 pt-18 sm:px-6 sm:pb-5 lg:px-9 lg:pb-7 lg:pt-6">
         <header className="grid shrink-0 gap-4 border-b border-[#1e1e1e]/12 pb-4 sm:grid-cols-[minmax(180px,1fr)_280px] sm:items-end lg:grid-cols-[240px_minmax(0,1fr)] lg:gap-8 lg:pb-4">

@@ -12,7 +12,7 @@ type TextCtaProps = {
 export default function TextCta({ href, children, ariaLabel, tone = "dark", className = "" }: TextCtaProps) {
   const colorClass = tone === "light"
     ? "text-[#1e1e1e] hover:text-[#552f22] focus-visible:outline-[#552f22]"
-    : "text-[#e8e7e7] hover:text-[#5e4cff] focus-visible:outline-[#e8e7e7]"
+    : "text-[#f4f2ec] hover:text-[#5e4cff] focus-visible:outline-[#f4f2ec]"
 
   return (
     <Link

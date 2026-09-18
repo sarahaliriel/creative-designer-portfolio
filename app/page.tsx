@@ -69,7 +69,7 @@ export default function Page() {
       <div className="relative z-10">
         <Menu />
         <Hero />
-        <div data-scroll-theme="dark" className="relative isolate overflow-x-clip bg-[#1e1e1e] text-[#e8e7e7]">
+        <div data-scroll-theme="dark" className="relative isolate overflow-x-clip bg-[#1e1e1e] text-[#f4f2ec]">
           <WhatMoves />
           <SelectedWork />
           <MotionSelected />

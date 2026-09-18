@@ -227,7 +227,7 @@ function NarrativeOrbAnimation() {
       aria-hidden="true"
       data-narrative-orb
       data-orb-state={isCta ? "cta" : "journey"}
-      className="narrative-orb fixed left-0 top-0 grid place-items-center rounded-full text-[#e8e7e7] outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-4 focus-visible:ring-offset-[#e8e7e7]"
+      className="narrative-orb fixed left-0 top-0 grid place-items-center rounded-full text-[#f4f2ec] outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-4 focus-visible:ring-offset-[#f4f2ec]"
       style={{
         boxShadow: glow,
         height: size,

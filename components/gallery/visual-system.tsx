@@ -35,7 +35,7 @@ export function VisualSystem({ system, labels }: { system: GalleryVisualSystem; 
   }
 
   return (
-    <section id="visual-system" className="scroll-mt-0 bg-[#e8e7e7] text-[#1e1e1e] [--visual-line:rgba(30,30,30,.14)] [--visual-line-soft:rgba(30,30,30,.10)] [--visual-muted:rgba(30,30,30,.52)]">
+    <section id="visual-system" className="scroll-mt-0 bg-[#f4f2ec] text-[#1e1e1e] [--visual-line:rgba(30,30,30,.14)] [--visual-line-soft:rgba(30,30,30,.10)] [--visual-muted:rgba(30,30,30,.52)]">
       <div className="px-5 sm:px-8 lg:px-[clamp(40px,4.6vw,88px)]">
         <header className="flex items-end justify-between border-b border-[var(--visual-line)] py-[clamp(24px,3vw,42px)]">
           <p className="text-[10px] font-black uppercase tracking-[0.24em] text-[var(--accent)]">{labels.system}</p>

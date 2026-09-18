@@ -276,7 +276,7 @@ export default function DesignGallery() {
   }, [t])
 
   return (
-    <div className="min-h-svh bg-[#e8e7e7] text-[#1e1e1e]">
+    <div className="min-h-svh bg-[#f4f2ec] text-[#1e1e1e]">
       <ScrollProgress />
       <GalleryHero projectCount={projects.length} pieceCount={totalPieces} />
       <SelectedProjectsIntro projectCount={projects.length} />

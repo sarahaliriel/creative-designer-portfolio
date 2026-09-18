@@ -59,15 +59,15 @@ function WorkDetails({ item, reducedMotion }: { item: SelectedWorkItem; reducedM
       transition={{ duration: 0.8, delay: reducedMotion ? 0 : 0.14, ease: EASE }}
       className="flex min-w-0 flex-col justify-end pt-7 lg:max-w-155 lg:pb-0 lg:pt-0"
     >
-      <div className="flex items-center justify-between gap-5 text-[9px] font-semibold uppercase tracking-[0.22em] text-[#e8e7e7]/42 sm:text-[10px]">
+      <div className="flex items-center justify-between gap-5 text-[9px] font-semibold uppercase tracking-[0.22em] text-[#f4f2ec]/42 sm:text-[10px]">
         <span>{item.id} / {PROJECT_TOTAL}</span>
         <span>{t("selectedWorkDesign")} · {item.year}</span>
       </div>
       <h3 className="mt-5 text-balance font-display text-[clamp(1.9rem,3.1vw,3.65rem)] leading-[0.96] tracking-[-0.045em] lg:text-[clamp(3.2rem,5.25vw,6.4rem)]">
         {item.title}
       </h3>
-      <p className="mt-4 max-w-[34ch] text-[13px] leading-relaxed text-[#e8e7e7]/58 sm:text-sm lg:mt-7 lg:max-w-[58ch] lg:text-[15px]">{item.description}</p>
-      <p className="mt-7 text-[9px] font-medium uppercase leading-relaxed tracking-[0.16em] text-[#e8e7e7]/30 lg:mt-10">
+      <p className="mt-4 max-w-[34ch] text-[13px] leading-relaxed text-[#f4f2ec]/58 sm:text-sm lg:mt-7 lg:max-w-[58ch] lg:text-[15px]">{item.description}</p>
+      <p className="mt-7 text-[9px] font-medium uppercase leading-relaxed tracking-[0.16em] text-[#f4f2ec]/30 lg:mt-10">
         {item.category} <span aria-hidden="true" className="mx-1.5 text-[#5e4cff]/80">·</span> {item.tools}
       </p>
     </motion.div>
@@ -91,11 +91,11 @@ export default function SelectedWork() {
   const reveal = reducedMotion ? {} : { initial: { opacity: 0, y: 32, filter: "blur(8px)" }, whileInView: { opacity: 1, y: 0, filter: "blur(0px)" } }
 
   return (
-    <section id="work" className="relative z-20 overflow-x-clip bg-[#1e1e1e] pb-28 pt-24 text-[#e8e7e7] sm:pb-40 sm:pt-32 lg:pt-44">
+    <section id="work" className="relative z-20 overflow-x-clip bg-[#1e1e1e] pb-28 pt-24 text-[#f4f2ec] sm:pb-40 sm:pt-32 lg:pt-44">
       <div className="container-bleed">
-        <header className="relative border-b border-[#e8e7e7]/12 pb-12 sm:pb-16">
+        <header className="relative border-b border-[#f4f2ec]/12 pb-12 sm:pb-16">
           <motion.div {...reveal} viewport={{ once: true, amount: 0.35 }} transition={{ duration: 0.85, ease: EASE }}>
-            <div className="relative z-10 flex justify-end text-[9px] font-semibold uppercase tracking-[0.24em] text-[#e8e7e7]/46 sm:text-[10px]">
+            <div className="relative z-10 flex justify-end text-[9px] font-semibold uppercase tracking-[0.24em] text-[#f4f2ec]/46 sm:text-[10px]">
               <span>{t("selectedWorkCount")}</span>
             </div>
             <div className="relative mt-9 isolate">
@@ -106,7 +106,7 @@ export default function SelectedWork() {
                 {t("selectedWorkTitle")}
               </h2>
             </div>
-            <p className="relative z-10 mt-9 max-w-xl text-sm leading-relaxed text-[#e8e7e7]/52 sm:ml-auto sm:text-base">
+            <p className="relative z-10 mt-9 max-w-xl text-sm leading-relaxed text-[#f4f2ec]/52 sm:ml-auto sm:text-base">
               {t("selectedWorkDescription")}
             </p>
           </motion.div>

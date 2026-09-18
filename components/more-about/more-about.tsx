@@ -81,7 +81,7 @@ export default function MoreAboutPage() {
   )
 
   return (
-    <main className="relative min-h-screen overflow-x-clip bg-[#e8e7e7] text-[#1e1e1e]">
+    <main className="relative min-h-screen overflow-x-clip bg-[#f4f2ec] text-[#1e1e1e]">
       <ScrollProgress />
       <Menu />
       <Hero />

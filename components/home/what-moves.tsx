@@ -44,7 +44,7 @@ function MovingWord({
       style={{ opacity, y, filter }}
     >
       {word}
-      {hasFinalPeriod ? <span className="text-[#e8e7e7]">.</span> : null}
+      {hasFinalPeriod ? <span className="text-[#f4f2ec]">.</span> : null}
     </motion.span>
   )
 }
@@ -94,10 +94,10 @@ function MagneticAboutButton({ reducedMotion }: { reducedMotion: boolean }) {
         onPointerMove={handlePointerMove}
         onPointerLeave={resetPosition}
         onBlur={resetPosition}
-        className="group relative inline-flex aspect-square w-[clamp(132px,38vw,156px)] items-center justify-center overflow-hidden rounded-full border border-transparent bg-[#552f22] p-5 text-center font-display text-[clamp(.72rem,.9vw,.88rem)] font-semibold uppercase leading-tight text-[#e8e7e7] transition-[transform,box-shadow,color] duration-700 ease-[cubic-bezier(.16,1,.3,1)] hover:text-[#552f22] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#552f22] sm:w-[clamp(158px,12vw,188px)]"
+        className="group relative inline-flex aspect-square w-[clamp(132px,38vw,156px)] items-center justify-center overflow-hidden rounded-full border border-transparent bg-[#552f22] p-5 text-center font-display text-[clamp(.72rem,.9vw,.88rem)] font-semibold uppercase leading-tight text-[#f4f2ec] transition-[transform,box-shadow,color] duration-700 ease-[cubic-bezier(.16,1,.3,1)] hover:text-[#552f22] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#552f22] sm:w-[clamp(158px,12vw,188px)]"
       >
         <span
-          className="absolute inset-0 origin-bottom scale-y-0 rounded-full bg-[#e8e7e7] transition-transform duration-700 ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-y-100"
+          className="absolute inset-0 origin-bottom scale-y-0 rounded-full bg-[#f4f2ec] transition-transform duration-700 ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-y-100"
           aria-hidden="true"
         />
         <motion.span
@@ -129,8 +129,8 @@ export default function WhatMoves() {
       ref={sectionRef}
       className={
         reduceMotion
-          ? "relative z-20 overflow-x-clip bg-transparent px-4 py-24 text-[#e8e7e7] sm:px-8 sm:py-32 lg:px-12"
-          : "relative z-20 h-[180svh] overflow-x-clip bg-transparent px-4 text-[#e8e7e7] sm:px-8 lg:px-12"
+          ? "relative z-20 overflow-x-clip bg-transparent px-4 py-24 text-[#f4f2ec] sm:px-8 sm:py-32 lg:px-12"
+          : "relative z-20 h-[180svh] overflow-x-clip bg-transparent px-4 text-[#f4f2ec] sm:px-8 lg:px-12"
       }
     >
       <div className={reduceMotion ? "mx-auto w-full" : "sticky top-0 mx-auto flex h-svh w-full items-center"}>

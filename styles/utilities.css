@@ -1,5 +1,5 @@
 :root{
-  --bg: #e8e7e7;
+  --bg: #f4f2ec;
   --text: #1e1e1e;
   --muted: rgba(30,30,30,.72);
   --hairline: rgba(30,30,30,.16);
@@ -72,7 +72,7 @@ h2{
 
 body {
   font-family: var(--font-inter), system-ui, sans-serif;
-  background: #e8e7e7;
+  background: #f4f2ec;
   color: #1e1e1e;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

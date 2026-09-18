@@ -90,7 +90,7 @@ export function ProjectPlayer({
             onSetClosed(false)
             onSetMinimized(false)
           }}
-          className="mx-auto flex aspect-video h-full max-h-full w-full max-w-295 items-center justify-center bg-black text-[12px] uppercase tracking-[0.2em] text-[#e8e7e7]/75 transition-colors duration-200 hover:text-white"
+          className="mx-auto flex aspect-video h-full max-h-full w-full max-w-295 items-center justify-center bg-black text-[12px] uppercase tracking-[0.2em] text-[#f4f2ec]/75 transition-colors duration-200 hover:text-white"
         >
           restore player
         </button>
@@ -126,8 +126,8 @@ export function ProjectPlayer({
             ) : (
               <div className="absolute inset-0 grid place-items-center px-8 text-center">
                 <div>
-                  <div className="text-[11px] uppercase tracking-[0.2em] text-[#e8e7e7]/60">video source pending</div>
-                  <div className="mt-3 max-w-[42ch] text-[14px] leading-snug text-[#e8e7e7]/78">
+                  <div className="text-[11px] uppercase tracking-[0.2em] text-[#f4f2ec]/60">video source pending</div>
+                  <div className="mt-3 max-w-[42ch] text-[14px] leading-snug text-[#f4f2ec]/78">
                     Add a direct MP4 URL in <span className="text-white">src</span>.
                   </div>
                 </div>

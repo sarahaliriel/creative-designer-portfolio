@@ -45,8 +45,8 @@ function MotionCard({
       transition={{ duration: 0.86, delay: reducedMotion ? 0 : index * 0.08, ease: EASE }}
       className="group relative min-w-0"
     >
-      <div className="relative overflow-hidden rounded-lg border border-[#e8e7e7]/10 bg-black shadow-[0_30px_90px_rgba(0,0,0,.34)]">
-        <Link href="/allprojects" aria-label={`${t("motionSelectedWatch")} ${project.title}`} className="block focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e8e7e7]">
+      <div className="relative overflow-hidden rounded-lg border border-[#f4f2ec]/10 bg-black shadow-[0_30px_90px_rgba(0,0,0,.34)]">
+        <Link href="/allprojects" aria-label={`${t("motionSelectedWatch")} ${project.title}`} className="block focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#f4f2ec]">
           <div className="relative aspect-video overflow-hidden">
             {videoSrc && isNearViewport ? (
               <video
@@ -63,7 +63,7 @@ function MotionCard({
             <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,.08),rgba(0,0,0,.76))]" />
             <div className="absolute left-4 top-4 flex items-center gap-2 sm:left-5 sm:top-5">
               <span className="h-2 w-2 rounded-full bg-[#552f22] shadow-[0_0_18px_rgba(85,47,34,.8)]" />
-              <span className="text-[9px] font-semibold uppercase tracking-[0.22em] text-[#e8e7e7]/70">
+              <span className="text-[9px] font-semibold uppercase tracking-[0.22em] text-[#f4f2ec]/70">
                 {project.id}
               </span>
             </div>
@@ -72,10 +72,10 @@ function MotionCard({
 
         <div className="flex flex-col gap-5 p-5 sm:p-6 lg:flex-row lg:items-end lg:justify-between">
           <div className="min-w-0">
-            <h3 className="font-display text-[clamp(1.5rem,3vw,3.8rem)] font-semibold leading-[0.95] tracking-[-0.045em] text-[#e8e7e7]">
+            <h3 className="font-display text-[clamp(1.5rem,3vw,3.8rem)] font-semibold leading-[0.95] tracking-[-0.045em] text-[#f4f2ec]">
               {project.title}
             </h3>
-            <p className="mt-3 text-[10px] font-medium uppercase leading-relaxed tracking-[0.16em] text-[#e8e7e7]/44 sm:text-[11px]">
+            <p className="mt-3 text-[10px] font-medium uppercase leading-relaxed tracking-[0.16em] text-[#f4f2ec]/44 sm:text-[11px]">
               {project.tagsLine} <span className="mx-2 text-[#5e4cff]">·</span> {project.year}
             </p>
           </div>
@@ -94,15 +94,15 @@ export default function MotionSelected() {
   const reveal = reducedMotion ? {} : { initial: { opacity: 0, y: 32, filter: "blur(8px)" }, whileInView: { opacity: 1, y: 0, filter: "blur(0px)" } }
 
   return (
-    <section className="relative z-20 overflow-x-clip bg-[#1e1e1e] py-24 text-[#e8e7e7] sm:py-32 lg:py-40">
+    <section className="relative z-20 overflow-x-clip bg-[#1e1e1e] py-24 text-[#f4f2ec] sm:py-32 lg:py-40">
       <div className="container-bleed">
         <motion.header
           {...reveal}
           viewport={{ once: true, amount: 0.32 }}
           transition={{ duration: 0.86, ease: EASE }}
-          className="relative border-b border-[#e8e7e7]/12 pb-12 sm:pb-16"
+          className="relative border-b border-[#f4f2ec]/12 pb-12 sm:pb-16"
         >
-          <div className="relative z-10 flex justify-end text-[9px] font-semibold uppercase tracking-[0.24em] text-[#e8e7e7]/46 sm:text-[10px]">
+          <div className="relative z-10 flex justify-end text-[9px] font-semibold uppercase tracking-[0.24em] text-[#f4f2ec]/46 sm:text-[10px]">
             <span>{t("motionSelectedKicker")}</span>
           </div>
           <div className="relative mt-9 isolate">
@@ -113,7 +113,7 @@ export default function MotionSelected() {
               {t("motionSelectedTitle")}
             </h2>
           </div>
-          <p className="relative z-10 mt-9 max-w-xl text-sm leading-relaxed text-[#e8e7e7]/52 sm:ml-auto sm:text-base">
+          <p className="relative z-10 mt-9 max-w-xl text-sm leading-relaxed text-[#f4f2ec]/52 sm:ml-auto sm:text-base">
             {t("motionSelectedCopy")}
           </p>
         </motion.header>
